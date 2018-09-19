@@ -4,6 +4,7 @@ import {mount} from 'react-mounter';
 
 import Index from "../../ui/pages/index/index";
 
+// noinspection JSUnusedGlobalSymbols
 FlowRouter.route("/", {
     name: "Index",
     action() {

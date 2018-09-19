@@ -1,0 +1,19 @@
+#IndexPage {
+  width: 90vw;
+  margin: 5vh 5vw;
+
+  #title {
+    font-size: 50px;
+  }
+
+  .btn-row  {
+    width: 90vw;
+  }
+
+  #fullscreen-btn {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    width: 90vw;
+  }
+}

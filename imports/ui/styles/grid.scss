@@ -1,0 +1,51 @@
+.col {
+  float: left;
+}
+
+.col.c1 {
+  width: calc(100% / 12);
+}
+
+.col.c2 {
+  width: calc(100% / 6);
+}
+
+.col.c3 {
+  width: 25%;
+}
+
+.col.c4 {
+  width: calc(100% / 3);
+}
+
+.col.c5 {
+  width: calc(100% / 12 * 5);
+}
+
+.col.c6 {
+  width: 50%;
+}
+
+.col.c7 {
+  width: calc(100% / 12 * 7);
+}
+
+.col.c8 {
+  width: calc(100% / 12 * 8);
+}
+
+.col.c9 {
+  width: calc(100% / 12 * 9);
+}
+
+.col.c10 {
+  width: calc(100% / 12 * 10);
+}
+
+.col.c11 {
+  width: calc(100% / 12 * 11);
+}
+
+.col.c12 {
+  width: 100%;
+}

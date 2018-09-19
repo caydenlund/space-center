@@ -1,0 +1,31 @@
+@import "../../styles/colors/colors";
+
+$button-height: 46px;
+
+.btn-container {
+  display: inline-block;
+  transition: filter 200ms;
+  border-radius: 7px;
+  .btn {
+    width: 100%;
+    height: $button-height;
+    line-height: $button-height;
+    color: white;
+    font-size: 20px;
+    padding: 0 30px;
+    display: inline-block;
+    transition: background-color 150ms;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    box-sizing: border-box;
+  }
+  &:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
+}

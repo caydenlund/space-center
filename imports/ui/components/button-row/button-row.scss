@@ -1,0 +1,13 @@
+@import "../../styles/colors/colors";
+
+.btn-row {
+  border-radius: 7px;
+  overflow: hidden;
+  padding: 0;
+  display: inline-block;
+  .btn-container {
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}

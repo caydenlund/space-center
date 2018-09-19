@@ -1,0 +1,612 @@
+@function color($color, $lightness) {
+  @if ($color == "red") {
+    @if ($lightness == 1) {
+      @return #ffcdd2;
+    }
+    @if ($lightness == 2) {
+      @return #ef9a9a;
+    }
+    @if ($lightness == 3) {
+      @return #e57373;
+    }
+    @if ($lightness == 4) {
+      @return #ef5350;
+    }
+    @if ($lightness == 5) {
+      @return #f44336;
+    }
+    @if ($lightness == 6) {
+      @return #e53935;
+    }
+    @if ($lightness == 7) {
+      @return #d32f2f;
+    }
+    @if ($lightness == 8) {
+      @return #c62828;
+    }
+    @if ($lightness == 9) {
+      @return #b71c1c;
+    }
+  }
+  @if ($color == "pink") {
+    @if ($lightness == 1) {
+      @return #F8BBD0;
+    }
+    @if ($lightness == 2) {
+      @return #F48FB1;
+    }
+    @if ($lightness == 3) {
+      @return #F06292;
+    }
+    @if ($lightness == 4) {
+      @return #EC407A;
+    }
+    @if ($lightness == 5) {
+      @return #E91E63;
+    }
+    @if ($lightness == 6) {
+      @return #D81B60;
+    }
+    @if ($lightness == 7) {
+      @return #C2185B;
+    }
+    @if ($lightness == 8) {
+      @return #AD1457;
+    }
+    @if ($lightness == 9) {
+      @return #880E4F;
+    }
+  }
+  @if ($color == "purple") {
+    @if ($lightness == 1) {
+      @return #E1BEE7;
+    }
+    @if ($lightness == 2) {
+      @return #CE93D8;
+    }
+    @if ($lightness == 3) {
+      @return #BA68C8;
+    }
+    @if ($lightness == 4) {
+      @return #AB47BC;
+    }
+    @if ($lightness == 5) {
+      @return #9C27B0;
+    }
+    @if ($lightness == 6) {
+      @return #8E24AA;
+    }
+    @if ($lightness == 7) {
+      @return #7B1FA2;
+    }
+    @if ($lightness == 8) {
+      @return #6A1B9A;
+    }
+    @if ($lightness == 9) {
+      @return #4A148C;
+    }
+  }
+  @if ($color == "deep-purple") {
+    @if ($lightness == 1) {
+      @return #D1C4E9;
+    }
+    @if ($lightness == 2) {
+      @return #B39DDB;
+    }
+    @if ($lightness == 3) {
+      @return #9575CD;
+    }
+    @if ($lightness == 4) {
+      @return #7E57C2;
+    }
+    @if ($lightness == 5) {
+      @return #673AB7;
+    }
+    @if ($lightness == 6) {
+      @return #5E35B1;
+    }
+    @if ($lightness == 7) {
+      @return #512DA8;
+    }
+    @if ($lightness == 8) {
+      @return #4527A0;
+    }
+    @if ($lightness == 9) {
+      @return #311B92;
+    }
+  }
+  @if ($color == "indigo") {
+    @if ($lightness == 1) {
+      @return #C5CAE9;
+    }
+    @if ($lightness == 2) {
+      @return #9FA8DA;
+    }
+    @if ($lightness == 3) {
+      @return #7986CB;
+    }
+    @if ($lightness == 4) {
+      @return #5C6BC0;
+    }
+    @if ($lightness == 5) {
+      @return #3F51B5;
+    }
+    @if ($lightness == 6) {
+      @return #3949AB;
+    }
+    @if ($lightness == 7) {
+      @return #303F9F;
+    }
+    @if ($lightness == 8) {
+      @return #283593;
+    }
+    @if ($lightness == 9) {
+      @return #1A237E;
+    }
+  }
+  @if ($color == "blue") {
+    @if ($lightness == 1) {
+      @return #BBDEFB;
+    }
+    @if ($lightness == 2) {
+      @return #90CAF9;
+    }
+    @if ($lightness == 3) {
+      @return #64B5F6;
+    }
+    @if ($lightness == 4) {
+      @return #42A5F5;
+    }
+    @if ($lightness == 5) {
+      @return #2196F3;
+    }
+    @if ($lightness == 6) {
+      @return #1E88E5;
+    }
+    @if ($lightness == 7) {
+      @return #1976D2;
+    }
+    @if ($lightness == 8) {
+      @return #1565C0;
+    }
+    @if ($lightness == 9) {
+      @return #0D47A1;
+    }
+  }
+  @if ($color == "light-blue") {
+    @if ($lightness == 1) {
+      @return #B3E5FC;
+    }
+    @if ($lightness == 2) {
+      @return #81D4FA;
+    }
+    @if ($lightness == 3) {
+      @return #4FC3F7;
+    }
+    @if ($lightness == 4) {
+      @return #29B6F6;
+    }
+    @if ($lightness == 5) {
+      @return #03A9F4;
+    }
+    @if ($lightness == 6) {
+      @return #039BE5;
+    }
+    @if ($lightness == 7) {
+      @return #0288D1;
+    }
+    @if ($lightness == 8) {
+      @return #0277BD;
+    }
+    @if ($lightness == 9) {
+      @return #01579B;
+    }
+  }
+  @if ($color == "cyan") {
+    @if ($lightness == 1) {
+      @return #B2EBF2;
+    }
+    @if ($lightness == 2) {
+      @return #80DEEA;
+    }
+    @if ($lightness == 3) {
+      @return #4DD0E1;
+    }
+    @if ($lightness == 4) {
+      @return #26C6DA;
+    }
+    @if ($lightness == 5) {
+      @return #00BCD4;
+    }
+    @if ($lightness == 6) {
+      @return #00ACC1;
+    }
+    @if ($lightness == 7) {
+      @return #0097A7;
+    }
+    @if ($lightness == 8) {
+      @return #00838F;
+    }
+    @if ($lightness == 9) {
+      @return #006064;
+    }
+  }
+  @if ($color == "teal") {
+    @if ($lightness == 1) {
+      @return #B2DFDB;
+    }
+    @if ($lightness == 2) {
+      @return #80CBC4;
+    }
+    @if ($lightness == 3) {
+      @return #4DB6AC;
+    }
+    @if ($lightness == 4) {
+      @return #26A69A;
+    }
+    @if ($lightness == 5) {
+      @return #009688;
+    }
+    @if ($lightness == 6) {
+      @return #00897B;
+    }
+    @if ($lightness == 7) {
+      @return #00796B;
+    }
+    @if ($lightness == 8) {
+      @return #00695C;
+    }
+    @if ($lightness == 9) {
+      @return #004D40;
+    }
+  }
+  @if ($color == "green") {
+    @if ($lightness == 1) {
+      @return #C8E6C9;
+    }
+    @if ($lightness == 2) {
+      @return #A5D6A7;
+    }
+    @if ($lightness == 3) {
+      @return #81C784;
+    }
+    @if ($lightness == 4) {
+      @return #66BB6A;
+    }
+    @if ($lightness == 5) {
+      @return #4CAF50;
+    }
+    @if ($lightness == 6) {
+      @return #43A047;
+    }
+    @if ($lightness == 7) {
+      @return #388E3C;
+    }
+    @if ($lightness == 8) {
+      @return #2E7D32;
+    }
+    @if ($lightness == 9) {
+      @return #1B5E20;
+    }
+  }
+  @if ($color == "light-green") {
+    @if ($lightness == 1) {
+      @return #DCEDC8;
+    }
+    @if ($lightness == 2) {
+      @return #C5E1A5;
+    }
+    @if ($lightness == 3) {
+      @return #AED581;
+    }
+    @if ($lightness == 4) {
+      @return #9CCC65;
+    }
+    @if ($lightness == 5) {
+      @return #8BC34A;
+    }
+    @if ($lightness == 6) {
+      @return #7CB342;
+    }
+    @if ($lightness == 7) {
+      @return #689F38;
+    }
+    @if ($lightness == 8) {
+      @return #558B2F;
+    }
+    @if ($lightness == 9) {
+      @return #33691E;
+    }
+  }
+  @if ($color == "lime") {
+    @if ($lightness == 1) {
+      @return #F0F4C3;
+    }
+    @if ($lightness == 2) {
+      @return #E6EE9C;
+    }
+    @if ($lightness == 3) {
+      @return #DCE775;
+    }
+    @if ($lightness == 4) {
+      @return #D4E157;
+    }
+    @if ($lightness == 5) {
+      @return #CDDC39;
+    }
+    @if ($lightness == 6) {
+      @return #C0CA33;
+    }
+    @if ($lightness == 7) {
+      @return #AFB42B;
+    }
+    @if ($lightness == 8) {
+      @return #9E9D24;
+    }
+    @if ($lightness == 9) {
+      @return #827717;
+    }
+  }
+  @if ($color == "yellow") {
+    @if ($lightness == 1) {
+      @return #FFF9C4;
+    }
+    @if ($lightness == 2) {
+      @return #FFF59D;
+    }
+    @if ($lightness == 3) {
+      @return #FFF176;
+    }
+    @if ($lightness == 4) {
+      @return #FFEE58;
+    }
+    @if ($lightness == 5) {
+      @return #FFEB3B;
+    }
+    @if ($lightness == 6) {
+      @return #FDD835;
+    }
+    @if ($lightness == 7) {
+      @return #FBC02D;
+    }
+    @if ($lightness == 8) {
+      @return #F9A825;
+    }
+    @if ($lightness == 9) {
+      @return #F57F17;
+    }
+  }
+  @if ($color == "amber") {
+    @if ($lightness == 1) {
+      @return #FFECB3;
+    }
+    @if ($lightness == 2) {
+      @return #FFE082;
+    }
+    @if ($lightness == 3) {
+      @return #FFD54F;
+    }
+    @if ($lightness == 4) {
+      @return #FFCA28;
+    }
+    @if ($lightness == 5) {
+      @return #FFC107;
+    }
+    @if ($lightness == 6) {
+      @return #FFB300;
+    }
+    @if ($lightness == 7) {
+      @return #FFA000;
+    }
+    @if ($lightness == 8) {
+      @return #FF8F00;
+    }
+    @if ($lightness == 9) {
+      @return #FF6F00;
+    }
+  }
+  @if ($color == "yellow") {
+    @if ($lightness == 1) {
+      @return #FFF9C4;
+    }
+    @if ($lightness == 2) {
+      @return #FFF59D;
+    }
+    @if ($lightness == 3) {
+      @return #FFF176;
+    }
+    @if ($lightness == 4) {
+      @return #FFEE58;
+    }
+    @if ($lightness == 5) {
+      @return #FFEB3B;
+    }
+    @if ($lightness == 6) {
+      @return #FDD835;
+    }
+    @if ($lightness == 7) {
+      @return #FBC02D;
+    }
+    @if ($lightness == 8) {
+      @return #F9A825;
+    }
+    @if ($lightness == 9) {
+      @return #F57F17;
+    }
+  }
+  @if ($color == "amber") {
+    @if ($lightness == 1) {
+      @return #FFECB3;
+    }
+    @if ($lightness == 2) {
+      @return #FFE082;
+    }
+    @if ($lightness == 3) {
+      @return #FFD54F;
+    }
+    @if ($lightness == 4) {
+      @return #FFCA28;
+    }
+    @if ($lightness == 5) {
+      @return #FFC107;
+    }
+    @if ($lightness == 6) {
+      @return #FFB300;
+    }
+    @if ($lightness == 7) {
+      @return #FFA000;
+    }
+    @if ($lightness == 8) {
+      @return #FF8F00;
+    }
+    @if ($lightness == 9) {
+      @return #FF6F00;
+    }
+  }
+  @if ($color == "orange") {
+    @if ($lightness == 1) {
+      @return #FFE0B2;
+    }
+    @if ($lightness == 2) {
+      @return #FFCC80;
+    }
+    @if ($lightness == 3) {
+      @return #FFB74D;
+    }
+    @if ($lightness == 4) {
+      @return #FFA726;
+    }
+    @if ($lightness == 5) {
+      @return #FF9800;
+    }
+    @if ($lightness == 6) {
+      @return #FB8C00;
+    }
+    @if ($lightness == 7) {
+      @return #F57C00;
+    }
+    @if ($lightness == 8) {
+      @return #EF6C00;
+    }
+    @if ($lightness == 9) {
+      @return #E65100;
+    }
+  }
+  @if ($color == "deep-orange") {
+    @if ($lightness == 1) {
+      @return #FFCCBC;
+    }
+    @if ($lightness == 2) {
+      @return #FFAB91;
+    }
+    @if ($lightness == 3) {
+      @return #FF8A65;
+    }
+    @if ($lightness == 4) {
+      @return #FF7043;
+    }
+    @if ($lightness == 5) {
+      @return #FF5722;
+    }
+    @if ($lightness == 6) {
+      @return #F4511E;
+    }
+    @if ($lightness == 7) {
+      @return #E64A19;
+    }
+    @if ($lightness == 8) {
+      @return #D84315;
+    }
+    @if ($lightness == 9) {
+      @return #BF360C;
+    }
+  }
+  @if ($color == "brown") {
+    @if ($lightness == 1) {
+      @return #D7CCC8;
+    }
+    @if ($lightness == 2) {
+      @return #BCAAA4;
+    }
+    @if ($lightness == 3) {
+      @return #A1887F;
+    }
+    @if ($lightness == 4) {
+      @return #8D6E63;
+    }
+    @if ($lightness == 5) {
+      @return #795548;
+    }
+    @if ($lightness == 6) {
+      @return #6D4C41;
+    }
+    @if ($lightness == 7) {
+      @return #5D4037;
+    }
+    @if ($lightness == 8) {
+      @return #4E342E;
+    }
+    @if ($lightness == 9) {
+      @return #3E2723;
+    }
+  }
+  @if ($color == "grey") {
+    @if ($lightness == 1) {
+      @return #F5F5F5;
+    }
+    @if ($lightness == 2) {
+      @return #EEEEEE;
+    }
+    @if ($lightness == 3) {
+      @return #E0E0E0;
+    }
+    @if ($lightness == 4) {
+      @return #BDBDBD;
+    }
+    @if ($lightness == 5) {
+      @return #9E9E9E;
+    }
+    @if ($lightness == 6) {
+      @return #757575;
+    }
+    @if ($lightness == 7) {
+      @return #616161;
+    }
+    @if ($lightness == 8) {
+      @return #424242;
+    }
+    @if ($lightness == 9) {
+      @return #212121;
+    }
+  }
+  @if ($color == "blue-grey") {
+    @if ($lightness == 1) {
+      @return #CFD8DC;
+    }
+    @if ($lightness == 2) {
+      @return #B0BEC5;
+    }
+    @if ($lightness == 3) {
+      @return #90A4AE;
+    }
+    @if ($lightness == 4) {
+      @return #78909C;
+    }
+    @if ($lightness == 5) {
+      @return #607D8B;
+    }
+    @if ($lightness == 6) {
+      @return #546E7A;
+    }
+    @if ($lightness == 7) {
+      @return #455A64;
+    }
+    @if ($lightness == 8) {
+      @return #37474F;
+    }
+    @if ($lightness == 9) {
+      @return #263238;
+    }
+  }
+  @return color("red", 5);
+}

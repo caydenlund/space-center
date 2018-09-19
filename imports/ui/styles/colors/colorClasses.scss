@@ -1,0 +1,1569 @@
+@import "colors";
+
+.red {
+  background: color("red", 5) !important;
+}
+
+.red.d1 {
+  background: color("red", 1) !important;
+}
+
+.red.d2 {
+  background: color("red", 2) !important;
+}
+
+.red.d3 {
+  background: color("red", 3) !important;
+}
+
+.red.d4 {
+  background: color("red", 4) !important;
+}
+
+.red.d5 {
+  background: color("red", 5) !important;
+}
+
+.red.d6 {
+  background: color("red", 6) !important;
+}
+
+.red.d7 {
+  background: color("red", 7) !important;
+}
+
+.red.d8 {
+  background: color("red", 8) !important;
+}
+
+.red.d9 {
+  background: color("red", 9) !important;
+}
+
+.pink {
+  background: color("pink", 5) !important;
+}
+
+.pink.d1 {
+  background: color("pink", 1) !important;
+}
+
+.pink.d2 {
+  background: color("pink", 2) !important;
+}
+
+.pink.d3 {
+  background: color("pink", 3) !important;
+}
+
+.pink.d4 {
+  background: color("pink", 4) !important;
+}
+
+.pink.d5 {
+  background: color("pink", 5) !important;
+}
+
+.pink.d6 {
+  background: color("pink", 6) !important;
+}
+
+.pink.d7 {
+  background: color("pink", 7) !important;
+}
+
+.pink.d8 {
+  background: color("pink", 8) !important;
+}
+
+.pink.d9 {
+  background: color("pink", 9) !important;
+}
+
+.purple {
+  background: color("purple", 5) !important;
+}
+
+.purple.d1 {
+  background: color("purple", 1) !important;
+}
+
+.purple.d2 {
+  background: color("purple", 2) !important;
+}
+
+.purple.d3 {
+  background: color("purple", 3) !important;
+}
+
+.purple.d4 {
+  background: color("purple", 4) !important;
+}
+
+.purple.d5 {
+  background: color("purple", 5) !important;
+}
+
+.purple.d6 {
+  background: color("purple", 6) !important;
+}
+
+.purple.d7 {
+  background: color("purple", 7) !important;
+}
+
+.purple.d8 {
+  background: color("purple", 8) !important;
+}
+
+.purple.d9 {
+  background: color("purple", 9) !important;
+}
+
+.deep-purple {
+  background: color("deep-purple", 5) !important;
+}
+
+.deep-purple.d1 {
+  background: color("deep-purple", 1) !important;
+}
+
+.deep-purple.d2 {
+  background: color("deep-purple", 2) !important;
+}
+
+.deep-purple.d3 {
+  background: color("deep-purple", 3) !important;
+}
+
+.deep-purple.d4 {
+  background: color("deep-purple", 4) !important;
+}
+
+.deep-purple.d5 {
+  background: color("deep-purple", 5) !important;
+}
+
+.deep-purple.d6 {
+  background: color("deep-purple", 6) !important;
+}
+
+.deep-purple.d7 {
+  background: color("deep-purple", 7) !important;
+}
+
+.deep-purple.d8 {
+  background: color("deep-purple", 8) !important;
+}
+
+.deep-purple.d9 {
+  background: color("deep-purple", 9) !important;
+}
+
+.indigo {
+  background: color("indigo", 5) !important;
+}
+
+.indigo.d1 {
+  background: color("indigo", 1) !important;
+}
+
+.indigo.d2 {
+  background: color("indigo", 2) !important;
+}
+
+.indigo.d3 {
+  background: color("indigo", 3) !important;
+}
+
+.indigo.d4 {
+  background: color("indigo", 4) !important;
+}
+
+.indigo.d5 {
+  background: color("indigo", 5) !important;
+}
+
+.indigo.d6 {
+  background: color("indigo", 6) !important;
+}
+
+.indigo.d7 {
+  background: color("indigo", 7) !important;
+}
+
+.indigo.d8 {
+  background: color("indigo", 8) !important;
+}
+
+.indigo.d9 {
+  background: color("indigo", 9) !important;
+}
+
+.blue {
+  background: color("blue", 5) !important;
+}
+
+.blue.d1 {
+  background: color("blue", 1) !important;
+}
+
+.blue.d2 {
+  background: color("blue", 2) !important;
+}
+
+.blue.d3 {
+  background: color("blue", 3) !important;
+}
+
+.blue.d4 {
+  background: color("blue", 4) !important;
+}
+
+.blue.d5 {
+  background: color("blue", 5) !important;
+}
+
+.blue.d6 {
+  background: color("blue", 6) !important;
+}
+
+.blue.d7 {
+  background: color("blue", 7) !important;
+}
+
+.blue.d8 {
+  background: color("blue", 8) !important;
+}
+
+.blue.d9 {
+  background: color("blue", 9) !important;
+}
+
+.light-blue {
+  background: color("light-blue", 5) !important;
+}
+
+.light-blue.d1 {
+  background: color("light-blue", 1) !important;
+}
+
+.light-blue.d2 {
+  background: color("light-blue", 2) !important;
+}
+
+.light-blue.d3 {
+  background: color("light-blue", 3) !important;
+}
+
+.light-blue.d4 {
+  background: color("light-blue", 4) !important;
+}
+
+.light-blue.d5 {
+  background: color("light-blue", 5) !important;
+}
+
+.light-blue.d6 {
+  background: color("light-blue", 6) !important;
+}
+
+.light-blue.d7 {
+  background: color("light-blue", 7) !important;
+}
+
+.light-blue.d8 {
+  background: color("light-blue", 8) !important;
+}
+
+.light-blue.d9 {
+  background: color("light-blue", 9) !important;
+}
+
+.cyan {
+  background: color("cyan", 5) !important;
+}
+
+.cyan.d1 {
+  background: color("cyan", 1) !important;
+}
+
+.cyan.d2 {
+  background: color("cyan", 2) !important;
+}
+
+.cyan.d3 {
+  background: color("cyan", 3) !important;
+}
+
+.cyan.d4 {
+  background: color("cyan", 4) !important;
+}
+
+.cyan.d5 {
+  background: color("cyan", 5) !important;
+}
+
+.cyan.d6 {
+  background: color("cyan", 6) !important;
+}
+
+.cyan.d7 {
+  background: color("cyan", 7) !important;
+}
+
+.cyan.d8 {
+  background: color("cyan", 8) !important;
+}
+
+.cyan.d9 {
+  background: color("cyan", 9) !important;
+}
+
+.teal {
+  background: color("teal", 5) !important;
+}
+
+.teal.d1 {
+  background: color("teal", 1) !important;
+}
+
+.teal.d2 {
+  background: color("teal", 2) !important;
+}
+
+.teal.d3 {
+  background: color("teal", 3) !important;
+}
+
+.teal.d4 {
+  background: color("teal", 4) !important;
+}
+
+.teal.d5 {
+  background: color("teal", 5) !important;
+}
+
+.teal.d6 {
+  background: color("teal", 6) !important;
+}
+
+.teal.d7 {
+  background: color("teal", 7) !important;
+}
+
+.teal.d8 {
+  background: color("teal", 8) !important;
+}
+
+.teal.d9 {
+  background: color("teal", 9) !important;
+}
+
+.green {
+  background: color("green", 5) !important;
+}
+
+.green.d1 {
+  background: color("green", 1) !important;
+}
+
+.green.d2 {
+  background: color("green", 2) !important;
+}
+
+.green.d3 {
+  background: color("green", 3) !important;
+}
+
+.green.d4 {
+  background: color("green", 4) !important;
+}
+
+.green.d5 {
+  background: color("green", 5) !important;
+}
+
+.green.d6 {
+  background: color("green", 6) !important;
+}
+
+.green.d7 {
+  background: color("green", 7) !important;
+}
+
+.green.d8 {
+  background: color("green", 8) !important;
+}
+
+.green.d9 {
+  background: color("green", 9) !important;
+}
+
+.light-green {
+  background: color("light-green", 5) !important;
+}
+
+.light-green.d1 {
+  background: color("light-green", 1) !important;
+}
+
+.light-green.d2 {
+  background: color("light-green", 2) !important;
+}
+
+.light-green.d3 {
+  background: color("light-green", 3) !important;
+}
+
+.light-green.d4 {
+  background: color("light-green", 4) !important;
+}
+
+.light-green.d5 {
+  background: color("light-green", 5) !important;
+}
+
+.light-green.d6 {
+  background: color("light-green", 6) !important;
+}
+
+.light-green.d7 {
+  background: color("light-green", 7) !important;
+}
+
+.light-green.d8 {
+  background: color("light-green", 8) !important;
+}
+
+.light-green.d9 {
+  background: color("light-green", 9) !important;
+}
+
+.lime {
+  background: color("lime", 5) !important;
+}
+
+.lime.d1 {
+  background: color("lime", 1) !important;
+}
+
+.lime.d2 {
+  background: color("lime", 2) !important;
+}
+
+.lime.d3 {
+  background: color("lime", 3) !important;
+}
+
+.lime.d4 {
+  background: color("lime", 4) !important;
+}
+
+.lime.d5 {
+  background: color("lime", 5) !important;
+}
+
+.lime.d6 {
+  background: color("lime", 6) !important;
+}
+
+.lime.d7 {
+  background: color("lime", 7) !important;
+}
+
+.lime.d8 {
+  background: color("lime", 8) !important;
+}
+
+.lime.d9 {
+  background: color("lime", 9) !important;
+}
+
+.yellow {
+  background: color("yellow", 5) !important;
+}
+
+.yellow.d1 {
+  background: color("yellow", 1) !important;
+}
+
+.yellow.d2 {
+  background: color("yellow", 2) !important;
+}
+
+.yellow.d3 {
+  background: color("yellow", 3) !important;
+}
+
+.yellow.d4 {
+  background: color("yellow", 4) !important;
+}
+
+.yellow.d5 {
+  background: color("yellow", 5) !important;
+}
+
+.yellow.d6 {
+  background: color("yellow", 6) !important;
+}
+
+.yellow.d7 {
+  background: color("yellow", 7) !important;
+}
+
+.yellow.d8 {
+  background: color("yellow", 8) !important;
+}
+
+.yellow.d9 {
+  background: color("yellow", 9) !important;
+}
+
+.amber {
+  background: color("amber", 5) !important;
+}
+
+.amber.d1 {
+  background: color("amber", 1) !important;
+}
+
+.amber.d2 {
+  background: color("amber", 2) !important;
+}
+
+.amber.d3 {
+  background: color("amber", 3) !important;
+}
+
+.amber.d4 {
+  background: color("amber", 4) !important;
+}
+
+.amber.d5 {
+  background: color("amber", 5) !important;
+}
+
+.amber.d6 {
+  background: color("amber", 6) !important;
+}
+
+.amber.d7 {
+  background: color("amber", 7) !important;
+}
+
+.amber.d8 {
+  background: color("amber", 8) !important;
+}
+
+.amber.d9 {
+  background: color("amber", 9) !important;
+}
+
+.orange {
+  background: color("orange", 5) !important;
+}
+
+.orange.d1 {
+  background: color("orange", 1) !important;
+}
+
+.orange.d2 {
+  background: color("orange", 2) !important;
+}
+
+.orange.d3 {
+  background: color("orange", 3) !important;
+}
+
+.orange.d4 {
+  background: color("orange", 4) !important;
+}
+
+.orange.d5 {
+  background: color("orange", 5) !important;
+}
+
+.orange.d6 {
+  background: color("orange", 6) !important;
+}
+
+.orange.d7 {
+  background: color("orange", 7) !important;
+}
+
+.orange.d8 {
+  background: color("orange", 8) !important;
+}
+
+.orange.d9 {
+  background: color("orange", 9) !important;
+}
+
+.deep-orange {
+  background: color("deep-orange", 5) !important;
+}
+
+.deep-orange.d1 {
+  background: color("deep-orange", 1) !important;
+}
+
+.deep-orange.d2 {
+  background: color("deep-orange", 2) !important;
+}
+
+.deep-orange.d3 {
+  background: color("deep-orange", 3) !important;
+}
+
+.deep-orange.d4 {
+  background: color("deep-orange", 4) !important;
+}
+
+.deep-orange.d5 {
+  background: color("deep-orange", 5) !important;
+}
+
+.deep-orange.d6 {
+  background: color("deep-orange", 6) !important;
+}
+
+.deep-orange.d7 {
+  background: color("deep-orange", 7) !important;
+}
+
+.deep-orange.d8 {
+  background: color("deep-orange", 8) !important;
+}
+
+.deep-orange.d9 {
+  background: color("deep-orange", 9) !important;
+}
+
+.brown {
+  background: color("brown", 5) !important;
+}
+
+.brown.d1 {
+  background: color("brown", 1) !important;
+}
+
+.brown.d2 {
+  background: color("brown", 2) !important;
+}
+
+.brown.d3 {
+  background: color("brown", 3) !important;
+}
+
+.brown.d4 {
+  background: color("brown", 4) !important;
+}
+
+.brown.d5 {
+  background: color("brown", 5) !important;
+}
+
+.brown.d6 {
+  background: color("brown", 6) !important;
+}
+
+.brown.d7 {
+  background: color("brown", 7) !important;
+}
+
+.brown.d8 {
+  background: color("brown", 8) !important;
+}
+
+.brown.d9 {
+  background: color("brown", 9) !important;
+}
+
+.grey {
+  background: color("grey", 5) !important;
+}
+
+.grey.d1 {
+  background: color("grey", 1) !important;
+}
+
+.grey.d2 {
+  background: color("grey", 2) !important;
+}
+
+.grey.d3 {
+  background: color("grey", 3) !important;
+}
+
+.grey.d4 {
+  background: color("grey", 4) !important;
+}
+
+.grey.d5 {
+  background: color("grey", 5) !important;
+}
+
+.grey.d6 {
+  background: color("grey", 6) !important;
+}
+
+.grey.d7 {
+  background: color("grey", 7) !important;
+}
+
+.grey.d8 {
+  background: color("grey", 8) !important;
+}
+
+.grey.d9 {
+  background: color("grey", 9) !important;
+}
+
+.blue-grey {
+  background: color("blue-grey", 5) !important;
+}
+
+.blue-grey.d1 {
+  background: color("blue-grey", 1) !important;
+}
+
+.blue-grey.d2 {
+  background: color("blue-grey", 2) !important;
+}
+
+.blue-grey.d3 {
+  background: color("blue-grey", 3) !important;
+}
+
+.blue-grey.d4 {
+  background: color("blue-grey", 4) !important;
+}
+
+.blue-grey.d5 {
+  background: color("blue-grey", 5) !important;
+}
+
+.blue-grey.d6 {
+  background: color("blue-grey", 6) !important;
+}
+
+.blue-grey.d7 {
+  background: color("blue-grey", 7) !important;
+}
+
+.blue-grey.d8 {
+  background: color("blue-grey", 8) !important;
+}
+
+.blue-grey.d9 {
+  background: color("blue-grey", 9) !important;
+}
+
+.black {
+  background: black !important;
+}
+
+.white {
+  background: white !important;
+}
+
+.primary {
+  background: $primary-color !important;
+}
+
+.success {
+  background: $success-color !important;
+}
+
+.warning {
+  background: $warning-color !important;
+}
+
+.error {
+  background: $error-color !important;
+}
+
+.red-text {
+  color: color("red", 5) !important;
+}
+
+.red-text.t1 {
+  color: color("red", 1) !important;
+}
+
+.red-text.t2 {
+  color: color("red", 2) !important;
+}
+
+.red-text.t3 {
+  color: color("red", 3) !important;
+}
+
+.red-text.t4 {
+  color: color("red", 4) !important;
+}
+
+.red-text.t5 {
+  color: color("red", 5) !important;
+}
+
+.red-text.t6 {
+  color: color("red", 6) !important;
+}
+
+.red-text.t7 {
+  color: color("red", 7) !important;
+}
+
+.red-text.t8 {
+  color: color("red", 8) !important;
+}
+
+.red-text.t9 {
+  color: color("red", 9) !important;
+}
+
+.pink-text {
+  color: color("pink", 5) !important;
+}
+
+.pink-text.t1 {
+  color: color("pink", 1) !important;
+}
+
+.pink-text.t2 {
+  color: color("pink", 2) !important;
+}
+
+.pink-text.t3 {
+  color: color("pink", 3) !important;
+}
+
+.pink-text.t4 {
+  color: color("pink", 4) !important;
+}
+
+.pink-text.t5 {
+  color: color("pink", 5) !important;
+}
+
+.pink-text.t6 {
+  color: color("pink", 6) !important;
+}
+
+.pink-text.t7 {
+  color: color("pink", 7) !important;
+}
+
+.pink-text.t8 {
+  color: color("pink", 8) !important;
+}
+
+.pink-text.t9 {
+  color: color("pink", 9) !important;
+}
+
+.purple-text {
+  color: color("purple", 5) !important;
+}
+
+.purple-text.t1 {
+  color: color("purple", 1) !important;
+}
+
+.purple-text.t2 {
+  color: color("purple", 2) !important;
+}
+
+.purple-text.t3 {
+  color: color("purple", 3) !important;
+}
+
+.purple-text.t4 {
+  color: color("purple", 4) !important;
+}
+
+.purple-text.t5 {
+  color: color("purple", 5) !important;
+}
+
+.purple-text.t6 {
+  color: color("purple", 6) !important;
+}
+
+.purple-text.t7 {
+  color: color("purple", 7) !important;
+}
+
+.purple-text.t8 {
+  color: color("purple", 8) !important;
+}
+
+.purple-text.t9 {
+  color: color("purple", 9) !important;
+}
+
+.deep-purple-text {
+  color: color("deep-purple", 5) !important;
+}
+
+.deep-purple-text.t1 {
+  color: color("deep-purple", 1) !important;
+}
+
+.deep-purple-text.t2 {
+  color: color("deep-purple", 2) !important;
+}
+
+.deep-purple-text.t3 {
+  color: color("deep-purple", 3) !important;
+}
+
+.deep-purple-text.t4 {
+  color: color("deep-purple", 4) !important;
+}
+
+.deep-purple-text.t5 {
+  color: color("deep-purple", 5) !important;
+}
+
+.deep-purple-text.t6 {
+  color: color("deep-purple", 6) !important;
+}
+
+.deep-purple-text.t7 {
+  color: color("deep-purple", 7) !important;
+}
+
+.deep-purple-text.t8 {
+  color: color("deep-purple", 8) !important;
+}
+
+.deep-purple-text.t9 {
+  color: color("deep-purple", 9) !important;
+}
+
+.indigo-text {
+  color: color("indigo", 5) !important;
+}
+
+.indigo-text.t1 {
+  color: color("indigo", 1) !important;
+}
+
+.indigo-text.t2 {
+  color: color("indigo", 2) !important;
+}
+
+.indigo-text.t3 {
+  color: color("indigo", 3) !important;
+}
+
+.indigo-text.t4 {
+  color: color("indigo", 4) !important;
+}
+
+.indigo-text.t5 {
+  color: color("indigo", 5) !important;
+}
+
+.indigo-text.t6 {
+  color: color("indigo", 6) !important;
+}
+
+.indigo-text.t7 {
+  color: color("indigo", 7) !important;
+}
+
+.indigo-text.t8 {
+  color: color("indigo", 8) !important;
+}
+
+.indigo-text.t9 {
+  color: color("indigo", 9) !important;
+}
+
+.blue-text {
+  color: color("blue", 5) !important;
+}
+
+.blue-text.t1 {
+  color: color("blue", 1) !important;
+}
+
+.blue-text.t2 {
+  color: color("blue", 2) !important;
+}
+
+.blue-text.t3 {
+  color: color("blue", 3) !important;
+}
+
+.blue-text.t4 {
+  color: color("blue", 4) !important;
+}
+
+.blue-text.t5 {
+  color: color("blue", 5) !important;
+}
+
+.blue-text.t6 {
+  color: color("blue", 6) !important;
+}
+
+.blue-text.t7 {
+  color: color("blue", 7) !important;
+}
+
+.blue-text.t8 {
+  color: color("blue", 8) !important;
+}
+
+.blue-text.t9 {
+  color: color("blue", 9) !important;
+}
+
+.light-blue-text {
+  color: color("light-blue", 5) !important;
+}
+
+.light-blue-text.t1 {
+  color: color("light-blue", 1) !important;
+}
+
+.light-blue-text.t2 {
+  color: color("light-blue", 2) !important;
+}
+
+.light-blue-text.t3 {
+  color: color("light-blue", 3) !important;
+}
+
+.light-blue-text.t4 {
+  color: color("light-blue", 4) !important;
+}
+
+.light-blue-text.t5 {
+  color: color("light-blue", 5) !important;
+}
+
+.light-blue-text.t6 {
+  color: color("light-blue", 6) !important;
+}
+
+.light-blue-text.t7 {
+  color: color("light-blue", 7) !important;
+}
+
+.light-blue-text.t8 {
+  color: color("light-blue", 8) !important;
+}
+
+.light-blue-text.t9 {
+  color: color("light-blue", 9) !important;
+}
+
+.cyan-text {
+  color: color("cyan", 5) !important;
+}
+
+.cyan-text.t1 {
+  color: color("cyan", 1) !important;
+}
+
+.cyan-text.t2 {
+  color: color("cyan", 2) !important;
+}
+
+.cyan-text.t3 {
+  color: color("cyan", 3) !important;
+}
+
+.cyan-text.t4 {
+  color: color("cyan", 4) !important;
+}
+
+.cyan-text.t5 {
+  color: color("cyan", 5) !important;
+}
+
+.cyan-text.t6 {
+  color: color("cyan", 6) !important;
+}
+
+.cyan-text.t7 {
+  color: color("cyan", 7) !important;
+}
+
+.cyan-text.t8 {
+  color: color("cyan", 8) !important;
+}
+
+.cyan-text.t9 {
+  color: color("cyan", 9) !important;
+}
+
+.teal-text {
+  color: color("teal", 5) !important;
+}
+
+.teal-text.t1 {
+  color: color("teal", 1) !important;
+}
+
+.teal-text.t2 {
+  color: color("teal", 2) !important;
+}
+
+.teal-text.t3 {
+  color: color("teal", 3) !important;
+}
+
+.teal-text.t4 {
+  color: color("teal", 4) !important;
+}
+
+.teal-text.t5 {
+  color: color("teal", 5) !important;
+}
+
+.teal-text.t6 {
+  color: color("teal", 6) !important;
+}
+
+.teal-text.t7 {
+  color: color("teal", 7) !important;
+}
+
+.teal-text.t8 {
+  color: color("teal", 8) !important;
+}
+
+.teal-text.t9 {
+  color: color("teal", 9) !important;
+}
+
+.green-text {
+  color: color("green", 5) !important;
+}
+
+.green-text.t1 {
+  color: color("green", 1) !important;
+}
+
+.green-text.t2 {
+  color: color("green", 2) !important;
+}
+
+.green-text.t3 {
+  color: color("green", 3) !important;
+}
+
+.green-text.t4 {
+  color: color("green", 4) !important;
+}
+
+.green-text.t5 {
+  color: color("green", 5) !important;
+}
+
+.green-text.t6 {
+  color: color("green", 6) !important;
+}
+
+.green-text.t7 {
+  color: color("green", 7) !important;
+}
+
+.green-text.t8 {
+  color: color("green", 8) !important;
+}
+
+.green-text.t9 {
+  color: color("green", 9) !important;
+}
+
+.light-green-text {
+  color: color("light-green", 5) !important;
+}
+
+.light-green-text.t1 {
+  color: color("light-green", 1) !important;
+}
+
+.light-green-text.t2 {
+  color: color("light-green", 2) !important;
+}
+
+.light-green-text.t3 {
+  color: color("light-green", 3) !important;
+}
+
+.light-green-text.t4 {
+  color: color("light-green", 4) !important;
+}
+
+.light-green-text.t5 {
+  color: color("light-green", 5) !important;
+}
+
+.light-green-text.t6 {
+  color: color("light-green", 6) !important;
+}
+
+.light-green-text.t7 {
+  color: color("light-green", 7) !important;
+}
+
+.light-green-text.t8 {
+  color: color("light-green", 8) !important;
+}
+
+.light-green-text.t9 {
+  color: color("light-green", 9) !important;
+}
+
+.lime-text {
+  color: color("lime", 5) !important;
+}
+
+.lime-text.t1 {
+  color: color("lime", 1) !important;
+}
+
+.lime-text.t2 {
+  color: color("lime", 2) !important;
+}
+
+.lime-text.t3 {
+  color: color("lime", 3) !important;
+}
+
+.lime-text.t4 {
+  color: color("lime", 4) !important;
+}
+
+.lime-text.t5 {
+  color: color("lime", 5) !important;
+}
+
+.lime-text.t6 {
+  color: color("lime", 6) !important;
+}
+
+.lime-text.t7 {
+  color: color("lime", 7) !important;
+}
+
+.lime-text.t8 {
+  color: color("lime", 8) !important;
+}
+
+.lime-text.t9 {
+  color: color("lime", 9) !important;
+}
+
+.yellow-text {
+  color: color("yellow", 5) !important;
+}
+
+.yellow-text.t1 {
+  color: color("yellow", 1) !important;
+}
+
+.yellow-text.t2 {
+  color: color("yellow", 2) !important;
+}
+
+.yellow-text.t3 {
+  color: color("yellow", 3) !important;
+}
+
+.yellow-text.t4 {
+  color: color("yellow", 4) !important;
+}
+
+.yellow-text.t5 {
+  color: color("yellow", 5) !important;
+}
+
+.yellow-text.t6 {
+  color: color("yellow", 6) !important;
+}
+
+.yellow-text.t7 {
+  color: color("yellow", 7) !important;
+}
+
+.yellow-text.t8 {
+  color: color("yellow", 8) !important;
+}
+
+.yellow-text.t9 {
+  color: color("yellow", 9) !important;
+}
+
+.amber-text {
+  color: color("amber", 5) !important;
+}
+
+.amber-text.t1 {
+  color: color("amber", 1) !important;
+}
+
+.amber-text.t2 {
+  color: color("amber", 2) !important;
+}
+
+.amber-text.t3 {
+  color: color("amber", 3) !important;
+}
+
+.amber-text.t4 {
+  color: color("amber", 4) !important;
+}
+
+.amber-text.t5 {
+  color: color("amber", 5) !important;
+}
+
+.amber-text.t6 {
+  color: color("amber", 6) !important;
+}
+
+.amber-text.t7 {
+  color: color("amber", 7) !important;
+}
+
+.amber-text.t8 {
+  color: color("amber", 8) !important;
+}
+
+.amber-text.t9 {
+  color: color("amber", 9) !important;
+}
+
+.orange-text {
+  color: color("orange", 5) !important;
+}
+
+.orange-text.t1 {
+  color: color("orange", 1) !important;
+}
+
+.orange-text.t2 {
+  color: color("orange", 2) !important;
+}
+
+.orange-text.t3 {
+  color: color("orange", 3) !important;
+}
+
+.orange-text.t4 {
+  color: color("orange", 4) !important;
+}
+
+.orange-text.t5 {
+  color: color("orange", 5) !important;
+}
+
+.orange-text.t6 {
+  color: color("orange", 6) !important;
+}
+
+.orange-text.t7 {
+  color: color("orange", 7) !important;
+}
+
+.orange-text.t8 {
+  color: color("orange", 8) !important;
+}
+
+.orange-text.t9 {
+  color: color("orange", 9) !important;
+}
+
+.deep-orange-text {
+  color: color("deep-orange", 5) !important;
+}
+
+.deep-orange-text.t1 {
+  color: color("deep-orange", 1) !important;
+}
+
+.deep-orange-text.t2 {
+  color: color("deep-orange", 2) !important;
+}
+
+.deep-orange-text.t3 {
+  color: color("deep-orange", 3) !important;
+}
+
+.deep-orange-text.t4 {
+  color: color("deep-orange", 4) !important;
+}
+
+.deep-orange-text.t5 {
+  color: color("deep-orange", 5) !important;
+}
+
+.deep-orange-text.t6 {
+  color: color("deep-orange", 6) !important;
+}
+
+.deep-orange-text.t7 {
+  color: color("deep-orange", 7) !important;
+}
+
+.deep-orange-text.t8 {
+  color: color("deep-orange", 8) !important;
+}
+
+.deep-orange-text.t9 {
+  color: color("deep-orange", 9) !important;
+}
+
+.brown-text {
+  color: color("brown", 5) !important;
+}
+
+.brown-text.t1 {
+  color: color("brown", 1) !important;
+}
+
+.brown-text.t2 {
+  color: color("brown", 2) !important;
+}
+
+.brown-text.t3 {
+  color: color("brown", 3) !important;
+}
+
+.brown-text.t4 {
+  color: color("brown", 4) !important;
+}
+
+.brown-text.t5 {
+  color: color("brown", 5) !important;
+}
+
+.brown-text.t6 {
+  color: color("brown", 6) !important;
+}
+
+.brown-text.t7 {
+  color: color("brown", 7) !important;
+}
+
+.brown-text.t8 {
+  color: color("brown", 8) !important;
+}
+
+.brown-text.t9 {
+  color: color("brown", 9) !important;
+}
+
+.grey-text {
+  color: color("grey", 5) !important;
+}
+
+.grey-text.t1 {
+  color: color("grey", 1) !important;
+}
+
+.grey-text.t2 {
+  color: color("grey", 2) !important;
+}
+
+.grey-text.t3 {
+  color: color("grey", 3) !important;
+}
+
+.grey-text.t4 {
+  color: color("grey", 4) !important;
+}
+
+.grey-text.t5 {
+  color: color("grey", 5) !important;
+}
+
+.grey-text.t6 {
+  color: color("grey", 6) !important;
+}
+
+.grey-text.t7 {
+  color: color("grey", 7) !important;
+}
+
+.grey-text.t8 {
+  color: color("grey", 8) !important;
+}
+
+.grey-text.t9 {
+  color: color("grey", 9) !important;
+}
+
+.blue-grey-text {
+  color: color("blue-grey", 5) !important;
+}
+
+.blue-grey-text.t1 {
+  color: color("blue-grey", 1) !important;
+}
+
+.blue-grey-text.t2 {
+  color: color("blue-grey", 2) !important;
+}
+
+.blue-grey-text.t3 {
+  color: color("blue-grey", 3) !important;
+}
+
+.blue-grey-text.t4 {
+  color: color("blue-grey", 4) !important;
+}
+
+.blue-grey-text.t5 {
+  color: color("blue-grey", 5) !important;
+}
+
+.blue-grey-text.t6 {
+  color: color("blue-grey", 6) !important;
+}
+
+.blue-grey-text.t7 {
+  color: color("blue-grey", 7) !important;
+}
+
+.blue-grey-text.t8 {
+  color: color("blue-grey", 8) !important;
+}
+
+.blue-grey-text.t9 {
+  color: color("blue-grey", 9) !important;
+}
+
+.black-text {
+  color: black !important;
+}
+
+.white-text {
+  color: white !important;
+}
+
+.primary-text {
+  color: $primary-color !important;
+}
+
+.success-text {
+  color: $success-color !important;
+}
+
+.warning-text {
+  color: $warning-color !important;
+}
+
+.error-text {
+  color: $error-color !important;
+}
