@@ -6,6 +6,7 @@ $button-height: 46px;
   display: inline-block;
   transition: filter 200ms;
   border-radius: 7px;
+  background: $primary-color;
   .btn {
     width: 100%;
     height: $button-height;
