@@ -1,0 +1,12 @@
+@import "../../styles/colors/colors";
+
+$light: lighten($primary-color, 5%);
+$dark: darken($primary-color, 40%);
+
+.line {
+  height: 2px;
+  width: 100%;
+  background: $primary-color;
+  background: linear-gradient(to right, $dark 0%, $light 50%, $dark 100%);
+  box-shadow: 0 0 30px $light;
+}

@@ -1,0 +1,121 @@
+@import "../../styles/colors/colors";
+
+$header-height: 10vh;
+$screenListWidth: 20vw;
+$animationLength: 500ms;
+
+$primary-light: lighten($primary-color, 20%);
+$primary-lighter: lighten($primary-color, 35%);
+
+#Station {
+  #StationHeader {
+    height: $header-height;
+    line-height: $header-height;
+    box-sizing: border-box;
+    position: relative;
+    background: color("grey", 9);
+    font-family: "Orbitron", sans-serif;
+    overflow: hidden;
+    .station {
+      padding: 0 20px;
+      font-size: $header-height / 2.8;
+      color: $primary-light;
+    }
+    .screen {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      line-height: $header-height;
+      font-size: 30px;
+      padding: 0 20px;
+      color: $primary-light;
+      cursor: pointer;
+      -webkit-transition: color .2s, right 1s;
+      transition: color .2s, right 1s;
+    }
+    .screen:hover {
+      color: $primary-lighter;
+    }
+    .screen:active {
+      background-color: color("grey", 8);
+    }
+
+    .ship {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      overflow: hidden;
+      font-size: $header-height / 2;
+      color: $primary-lighter;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      z-index: 0;
+    }
+    .line {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  #StationHeader.hidden {
+    .screen {
+      right: -20vw;
+    }
+  }
+
+  #ScreenList {
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    right: 0;
+    height: 100vh - $header-height;
+    width: $screenListWidth;
+    border-left: 2px solid $secondary-color;
+    background: color("grey", 9);
+    transition: right $animationLength $animationLength;
+    z-index: 2;
+    .screen {
+      padding: 15px;
+      font-size: 20px;
+      transition: background 200ms, color 200ms;
+      cursor: pointer;
+    }
+    .screen:hover {
+      background: color("grey", 8);
+      color: $primary-light;
+    }
+  }
+  #ScreenList.hidden {
+    right: -$screenListWidth;
+    transition: right $animationLength;
+  }
+
+  #screen {
+    position: absolute;
+    bottom: 0;
+    background: black;
+    width: 100vw;
+    height: 100vh - $header-height;
+    opacity: 1;
+    transition: opacity $animationLength;
+    z-index: -1;
+    #hiddenTarget {
+      visibility: hidden;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -100;
+    }
+  }
+
+  #screen.hidden {
+    opacity: 0;
+    #hiddenTarget {
+      visibility: visible;
+    }
+  }
+}
