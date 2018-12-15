@@ -7,6 +7,7 @@ $button-height: 46px;
   transition: filter 200ms;
   border-radius: 7px;
   background: $primary-color;
+
   .btn {
     width: 100%;
     height: $button-height;
@@ -25,6 +26,7 @@ $button-height: 46px;
     user-select: none !important;
     box-sizing: border-box;
   }
+
   &:hover {
     cursor: pointer;
     filter: brightness(85%);

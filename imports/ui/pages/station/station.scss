@@ -16,11 +16,13 @@ $primary-lighter: lighten($primary-color, 35%);
     background: color("grey", 9);
     font-family: "Orbitron", sans-serif;
     overflow: hidden;
+
     .station {
       padding: 0 20px;
       font-size: $header-height / 2.8;
       color: $primary-light;
     }
+
     .screen {
       position: absolute;
       height: 100%;
@@ -34,9 +36,11 @@ $primary-lighter: lighten($primary-color, 35%);
       -webkit-transition: color .2s, right 1s;
       transition: color .2s, right 1s;
     }
+
     .screen:hover {
       color: $primary-lighter;
     }
+
     .screen:active {
       background-color: color("grey", 8);
     }
@@ -54,11 +58,13 @@ $primary-lighter: lighten($primary-color, 35%);
       text-align: center;
       z-index: 0;
     }
+
     .line {
       position: absolute;
       bottom: 0;
     }
   }
+
   #StationHeader.hidden {
     .screen {
       right: -20vw;
@@ -76,17 +82,20 @@ $primary-lighter: lighten($primary-color, 35%);
     background: color("grey", 9);
     transition: right $animationLength $animationLength;
     z-index: 2;
+
     .screen {
       padding: 15px;
       font-size: 20px;
       transition: background 200ms, color 200ms;
       cursor: pointer;
     }
+
     .screen:hover {
       background: color("grey", 8);
       color: $primary-light;
     }
   }
+
   #ScreenList.hidden {
     right: -$screenListWidth;
     transition: right $animationLength;
@@ -101,6 +110,7 @@ $primary-lighter: lighten($primary-color, 35%);
     opacity: 1;
     transition: opacity $animationLength;
     z-index: -1;
+
     #hiddenTarget {
       visibility: hidden;
       width: 100vw;
@@ -114,6 +124,7 @@ $primary-lighter: lighten($primary-color, 35%);
 
   #screen.hidden {
     opacity: 0;
+
     #hiddenTarget {
       visibility: visible;
     }
