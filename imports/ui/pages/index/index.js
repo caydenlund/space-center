@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {FlowRouter} from 'meteor/kadira:flow-router';
 
 import "./index.scss";
 
@@ -8,6 +9,8 @@ import ButtonRow from "../../components/button-row/button-row";
 export default class Index extends Component {
     fullScreenButton() {
         let fullScreenButton = [];
+        // noinspection JSUnresolvedVariable
+        // noinspection JSUnresolvedVariable
         if (!!(document.body.webkitRequestFullScreen) && !((window.fullScreen) ||
             (window.innerWidth === screen.width && window.innerHeight === screen.height))) {
             fullScreenButton = (
@@ -21,7 +24,7 @@ export default class Index extends Component {
     }
 
     goFullscreen() {
-        // noinspection JSCheckFunctionSignatures
+        // noinspection JSUnresolvedVariable
         document.body.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
 
         setTimeout(() => {

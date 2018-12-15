@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {withTracker} from 'meteor/react-meteor-data';
 import {Session} from "meteor/session";
+import {FlowRouter} from 'meteor/kadira:flow-router';
 
 // Import API
 import Stations from "../../../api/stations/stations";

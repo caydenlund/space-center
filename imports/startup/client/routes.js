@@ -1,5 +1,6 @@
 import React from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
+// noinspection ES6CheckImport
 import {mount} from 'react-mounter';
 
 import Stations from "../../api/stations/stations";
