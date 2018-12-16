@@ -3,6 +3,8 @@ import {FlowRouter} from 'meteor/kadira:flow-router';
 // noinspection ES6CheckImport
 import {mount} from 'react-mounter';
 
+import {_} from "meteor/underscore";
+
 import Stations from "../../api/stations/stations";
 
 // Import pages
@@ -30,9 +32,6 @@ FlowRouter.route("/pages/:page", {
     action(params) {
         let page;
         switch (params.page) {
-            case "index":
-                FlowRouter.go("Index");
-                return;
             case "fd":
                 page = FlightDirector;
                 break;
@@ -55,17 +54,24 @@ FlowRouter.route("/stations", {
 
 FlowRouter.route("/stations/:station", {
     action(params) {
-        FlowRouter.go("Station", {station: params.station, screen: "Login"});
+        let station = _.findWhere(Stations, {name: params.station});
+        if (typeof station == "undefined") {
+            console.log("Invalid station: " + params.station);
+            FlowRouter.go("Index");
+        } else {
+            FlowRouter.go("Station", {station: station.name, screen: station.screens[0].name});
+        }
     }
 });
 
 FlowRouter.route("/stations/:station/:screen", {
     name: "Station",
     action(params) {
-        if (!Stations[params.station]) {
+        if (typeof _.findWhere(Stations, {name: params.station}) == "undefined") {
             console.log("Invalid station: " + params.station);
             FlowRouter.go("Index");
+        } else {
+            mount(Station, {station: params.station, screen: params.screen});
         }
-        mount(Station, {station: params.station, screen: params.screen});
     }
 });

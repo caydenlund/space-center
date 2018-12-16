@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
+import Stations from "../../../api/stations/stations";
 
 import "./index.scss";
 
@@ -36,22 +37,26 @@ export default class Index extends Component {
         FlowRouter.go(page, params);
     }
 
+    stationList() {
+        let stations = [];
+        Stations.forEach((station) => {
+            stations.push(
+                <Button className={"col c2"} key={station.name} onClick={() => {
+                    this.navigate("Station", {station: station.name});
+                }}>
+                    {station.name}
+                </Button>
+            );
+        });
+        return stations;
+    }
+
     render() {
         return (
             <div id="IndexPage">
                 <h1 id={"title"} className={"centered"}>Space Server</h1>
                 <ButtonRow id={"stations"}>
-                    <Button className={"col c4"} onClick={() => {
-                        this.navigate("Station", {station: "Weapons"})
-                    }}>
-                        Station 1
-                    </Button>
-                    <Button className={"col c4"}>
-                        Station 2
-                    </Button>
-                    <Button className={"col c4"}>
-                        Station 3
-                    </Button>
+                    {this.stationList()}
                 </ButtonRow>
                 <ButtonRow id={"pages"}>
                     <Button className={"col c6"} onClick={() => {

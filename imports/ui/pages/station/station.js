@@ -3,6 +3,8 @@ import {withTracker} from 'meteor/react-meteor-data';
 import {Session} from "meteor/session";
 import {FlowRouter} from 'meteor/kadira:flow-router';
 
+import {_} from "meteor/underscore";
+
 // Import API
 import Stations from "../../../api/stations/stations";
 
@@ -93,20 +95,21 @@ class ScreenList extends Component {
         let screens = [];
         for (let screen of screenList) {
             screens.push(
-                <div className={"screen"} key={screen} onClick={() => {
-                    this.selectScreen(screen);
-                }}>{screen}</div>
+                <div className={"screen"} key={screen.name} onClick={() => {
+                    this.selectScreen(screen.name);
+                }}>{screen.name}</div>
             );
         }
         return screens;
     }
 
     screenList(station) {
-        if (!Stations[station]) {
+        let currStation = _.findWhere(Stations, {name: station});
+        if (typeof currStation == "undefined") {
             console.log("Invalid station: " + station);
             return [];
         }
-        return Stations[station].screens;
+        return currStation.screens;
     }
 
     render() {
