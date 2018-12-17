@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
-import Stations from "../../../api/stations/stations";
+import Constants from "../../../api/constants/constants";
 
 import "./index.scss";
 
@@ -39,7 +39,7 @@ export default class Index extends Component {
 
     stationList() {
         let stations = [];
-        Stations.forEach((station) => {
+        Constants.Stations.forEach((station) => {
             stations.push(
                 <Button className={"col c2"} key={station.name} onClick={() => {
                     this.navigate("Station", {station: station.name});

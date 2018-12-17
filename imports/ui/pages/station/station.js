@@ -6,7 +6,7 @@ import {FlowRouter} from 'meteor/kadira:flow-router';
 import {_} from "meteor/underscore";
 
 // Import API
-import Stations from "../../../api/stations/stations";
+import Constants from "../../../api/constants/constants";
 
 // Import screens
 import LoginScreen from "../../screens/login/login";
@@ -69,7 +69,7 @@ class StationHeader extends Component {
                     {this.props.station}
                 </div>
                 <div className={"ship"}>
-                    Ship
+                    {Constants.shipName}
                 </div>
                 <div className={"right screen"} onClick={() => {
                     this.setHidden(true)
@@ -104,7 +104,7 @@ class ScreenList extends Component {
     }
 
     screenList(station) {
-        let currStation = _.findWhere(Stations, {name: station});
+        let currStation = _.findWhere(Constants.Stations, {name: station});
         if (typeof currStation == "undefined") {
             console.log("Invalid station: " + station);
             return [];

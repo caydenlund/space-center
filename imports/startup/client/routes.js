@@ -5,7 +5,7 @@ import {mount} from 'react-mounter';
 
 import {_} from "meteor/underscore";
 
-import Stations from "../../api/stations/stations";
+import Constants from "../../api/constants/constants";
 
 // Import pages
 import FlightDirector from "../../ui/pages/flightDirector/flightDirector";
@@ -54,7 +54,7 @@ FlowRouter.route("/stations", {
 
 FlowRouter.route("/stations/:station", {
     action(params) {
-        let station = _.findWhere(Stations, {name: params.station});
+        let station = _.findWhere(Constants.Stations, {name: params.station});
         if (typeof station == "undefined") {
             console.log("Invalid station: " + params.station);
             FlowRouter.go("Index");
@@ -67,7 +67,7 @@ FlowRouter.route("/stations/:station", {
 FlowRouter.route("/stations/:station/:screen", {
     name: "Station",
     action(params) {
-        if (typeof _.findWhere(Stations, {name: params.station}) == "undefined") {
+        if (typeof _.findWhere(Constants.Stations, {name: params.station}) == "undefined") {
             console.log("Invalid station: " + params.station);
             FlowRouter.go("Index");
         } else {
