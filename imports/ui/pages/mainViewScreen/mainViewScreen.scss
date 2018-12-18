@@ -1,0 +1,107 @@
+@import "../../styles/colors/colors";
+
+$header-inner-height: 8vh;
+$header-outer-height: 10vh;
+$header-outer-width: 15vw;
+$difference: $header-outer-height - $header-inner-height;
+$background-color: darken($primary-color, 46%);
+
+$primary-light: lighten($primary-color, 20%);
+$primary-lighter: lighten($primary-color, 35%);
+
+#MainViewScreen {
+  #MainViewScreenHeader {
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+
+    .outer {
+      position: fixed;
+      box-sizing: border-box;
+      z-index: 1;
+      height: $header-outer-height;
+      width: $header-outer-width;
+      background: $background-color;
+
+      .line {
+        background: darken($primary-color, 30%);
+      }
+
+      .parallelogram {
+        margin-top: $header-inner-height;
+        margin-left: calc(#{$header-outer-width} - #{$difference} / 2);
+        width: $difference;
+        height: $difference;
+        transform: skew(-45deg);
+        background: $primary-light;
+      }
+    }
+
+    .outer.right {
+      right: 0;
+
+      .parallelogram {
+        margin-left: - $difference / 2;
+        transform: skew(45deg);
+      }
+    }
+
+    .inner {
+      height: $header-inner-height;
+      line-height: $header-inner-height;
+      box-sizing: border-box;
+      position: relative;
+      background: $background-color;
+      font-family: "Orbitron", sans-serif;
+      overflow: hidden;
+
+      .screen {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        line-height: $header-inner-height;
+        font-size: $header-inner-height / 2.5;
+        padding: 0 20px;
+        color: $primary-light;
+        z-index: 2;
+      }
+
+      .ship {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        overflow: hidden;
+        font-size: $header-inner-height / 2;
+        color: $primary-lighter;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        z-index: 0;
+      }
+
+      .line {
+        position: absolute;
+        bottom: 0;
+        box-shadow: none;
+      }
+    }
+  }
+
+  #MainViewScreenHeader.transparent {
+    opacity: 0.5;
+  }
+
+  .screen {
+    position: fixed;
+    top: $header-outer-height;
+    left: 0;
+    width: 100%;
+    height: 100vh - $header-outer-height;
+  }
+
+  .screen.full {
+    top: 0;
+    height: 100vh;
+  }
+}
