@@ -1,0 +1,36 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+  }
+
+  .inner {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background: white;
+    border-radius: 10px;
+    color: black;
+
+    .title {
+      font-size: 30px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .content {
+      font-size: 24px;
+      padding: 20px;
+    }
+  }
+}
