@@ -1,8 +1,11 @@
 import {Meteor} from "meteor/meteor";
 
 import "./sockets";
+import startup from "./startup";
 
-Meteor.startup(() => {
-    // code to run on server at startup
-    console.log("Server started up");
-});
+// Import Collections
+import "../../api/systems/systems";
+import "../../api/systems/methods";
+import "../../api/systems/publications";
+
+Meteor.startup(startup);
