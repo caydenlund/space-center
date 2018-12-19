@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {withTracker} from 'meteor/react-meteor-data';
 import {Session} from "meteor/session";
+import socket from "../../../startup/client/socket";
 // Import API
 import Constants from "../../../api/constants/constants";
 // Import screens
@@ -11,6 +12,34 @@ import Line from "../../components/line/line";
 import "./mainViewScreen.scss";
 
 class MainViewScreen extends Component {
+    componentDidMount() {
+        socket.on("mvs.shake", (data) => {
+            let magnitude = data;
+            let mvs = $("#MainViewScreen");
+
+            const getRandom = (magnitude) => {
+                return (magnitude) - 2 * magnitude * Math.random();
+            };
+
+            const keyframe = (magnitude) => {
+                let blur = "blur(" + magnitude / 10 + "px)";
+                let translate = "translate(" + getRandom(magnitude / 4) + "px, " + getRandom(magnitude / 4) + "px)";
+                mvs.css("filter", blur);
+                mvs.css("transform", translate);
+                magnitude /= 1.8;
+                if (magnitude > 1) {
+                    requestAnimationFrame(() => {
+                        keyframe(magnitude)
+                    });
+                } else {
+                    mvs.css("filter", "blur(0)");
+                    mvs.css("transform", "translate(0, 0)");
+                }
+            };
+            keyframe(magnitude);
+        });
+    }
+
     getScreen() {
         let renderedScreen = <SplashMVS/>;
         switch (this.props.screen) {

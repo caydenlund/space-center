@@ -2,14 +2,15 @@ import React, {Component} from "react";
 import {withTracker} from 'meteor/react-meteor-data';
 import {Session} from "meteor/session";
 import {FlowRouter} from 'meteor/kadira:flow-router';
-
 import {_} from "meteor/underscore";
+import socket from "../../../startup/client/socket";
 
 // Import API
 import Constants from "../../../api/constants/constants";
 
 // Import screens
 import LoginScreen from "../../screens/login/login";
+import NotFoundScreen from "../../screens/notFound/notFound";
 
 // Import components
 import Line from "../../components/line/line";
@@ -17,6 +18,34 @@ import Line from "../../components/line/line";
 import "./station.scss";
 
 class Station extends Component {
+    componentDidMount() {
+        socket.on("station.shake", (data) => {
+            let magnitude = data;
+            let station = $("#Station");
+
+            const getRandom = (magnitude) => {
+                return (magnitude) - 2 * magnitude * Math.random();
+            };
+
+            const keyframe = (magnitude) => {
+                let blur = "blur(" + magnitude / 10 + "px)";
+                let translate = "translate(" + getRandom(magnitude / 4) + "px, " + getRandom(magnitude / 4) + "px)";
+                station.css("filter", blur);
+                station.css("transform", translate);
+                magnitude /= 1.8;
+                if (magnitude > 1) {
+                    requestAnimationFrame(() => {
+                        keyframe(magnitude)
+                    });
+                } else {
+                    station.css("filter", "blur(0)");
+                    station.css("transform", "translate(0, 0)");
+                }
+            };
+            keyframe(magnitude);
+        });
+    }
+
     getScreen(screen) {
         let renderedScreen = "";
         switch (screen) {
@@ -24,7 +53,7 @@ class Station extends Component {
                 renderedScreen = (<LoginScreen/>);
                 break;
             default:
-                renderedScreen = (<h1>Screen not found</h1>);
+                renderedScreen = (<NotFoundScreen/>);
                 break;
         }
         return renderedScreen;
