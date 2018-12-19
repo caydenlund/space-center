@@ -1,0 +1,15 @@
+@import "../../styles/colors/colors";
+
+.progressBar {
+  height: 20px;
+  width: 100%;
+  border-radius: 5px;
+  background: $secondary-color;
+  overflow: hidden;
+
+  .inner {
+    height: 100%;
+    float: left;
+    background: $primary-color;
+  }
+}
