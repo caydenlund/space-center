@@ -10,7 +10,13 @@ $primary-light: lighten($primary-color, 20%);
 $primary-lighter: lighten($primary-color, 35%);
 
 #MainViewScreen {
-  cursor: none;
+  cursor: none !important;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
   
   #MainViewScreenHeader {
     -webkit-transition: opacity 1s;
