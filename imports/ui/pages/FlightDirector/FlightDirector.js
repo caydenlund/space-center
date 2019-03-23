@@ -3,12 +3,12 @@ import React, {Component} from "react";
 import {withTracker} from "meteor/react-meteor-data";
 import socket from "../../../startup/client/socket";
 
-import Systems from "../../../api/systems/systems";
+import Systems from "../../../api/Systems/Systems";
 
-import "./flightDirector.scss";
+import "./FlightDirector.scss";
 // Import cards
-import CardFD from "./cards/cardFD";
-import SystemsFD from "./cards/systemsFD";
+import CardFD from "./cards/CardFD";
+import SystemsFD from "./cards/SystemsFD";
 
 class FlightDirector extends Component {
     static broadcast(name, data) {

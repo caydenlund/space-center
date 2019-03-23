@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import classnames from "classnames";
 
-import "./button.scss";
+import "./Button.scss";
 
 export default class Button extends Component {
     render() {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import classnames from "classnames";
 
-import "./button-row.scss";
+import "./ButtonRow.scss";
 
 export default class ButtonRow extends Component {
     render() {

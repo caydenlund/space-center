@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import classnames from "classnames";
 
-import "./progress-bar.scss";
+import "./ProgressBar.scss";
 
 export default class ProgressBar extends Component {
     innerBar() {

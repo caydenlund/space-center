@@ -7,12 +7,12 @@ import socket from "../../../startup/client/socket";
 // Import API
 import Constants from "../../../api/constants/constants";
 // Import screens
-import LoginScreen from "../../screens/login/login";
-import NotFoundScreen from "../../screens/notFound/notFound";
+import LoginScreen from "./screens/Login/Login";
+import NotFoundScreen from "./screens/NotFound/NotFound";
 // Import components
-import Line from "../../components/line/line";
+import Line from "../../components/Line/Line";
 
-import "./station.scss";
+import "./Station.scss";
 
 class Station extends Component {
     static getScreen(screen) {
@@ -91,7 +91,7 @@ class StationHeader extends Component {
     render() {
         return (
             <div id={"StationHeader"} className={this.props.className}>
-                <div className={"left station"}>
+                <div className={"left Station"}>
                     {this.props.station}
                 </div>
                 <div className={"ship"}>
@@ -120,7 +120,7 @@ class ScreenList extends Component {
     static screenList(station) {
         let currStation = _.findWhere(Constants.Stations, {name: station});
         if (typeof currStation == "undefined") {
-            console.log("Invalid station: " + station);
+            console.log("Invalid Station: " + station);
             return [];
         }
         return currStation.screens;

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import classnames from "classnames";
 
-import "./line.scss";
+import "./Line.scss";
 
 export default class Line extends Component {
 

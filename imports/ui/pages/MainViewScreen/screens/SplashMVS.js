@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import "./splashMVS.scss";
+import "./SplashMVS.scss";
 
 export default class SplashMVS extends Component {
     render() {

@@ -5,11 +5,11 @@ import socket from "../../../startup/client/socket";
 // Import API
 import Constants from "../../../api/constants/constants";
 // Import screens
-import SplashMVS from "./screens/splashMVS";
+import SplashMVS from "./screens/SplashMVS";
 // Import components
-import Line from "../../components/line/line";
+import Line from "../../components/Line/Line";
 
-import "./mainViewScreen.scss";
+import "./MainViewScreen.scss";
 
 class MainViewScreen extends Component {
     static getTransparent(screen) {

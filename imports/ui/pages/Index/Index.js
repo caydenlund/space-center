@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import Constants from "../../../api/constants/constants";
 
-import "./index.scss";
+import "./Index.scss";
 
-import Button from "../../components/button/button";
-import ButtonRow from "../../components/button-row/button-row";
+import Button from "../../components/Button/Button";
+import ButtonRow from "../../components/ButtonRow/ButtonRow";
 
 export default class Index extends Component {
     static navigate(page, params) {

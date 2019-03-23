@@ -1,5 +1,5 @@
 import {Meteor} from "meteor/meteor";
-import Systems from "./systems";
+import Systems from "./Systems";
 
 Meteor.methods({
     "systems.addSystem"(system) {

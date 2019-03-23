@@ -1,5 +1,5 @@
 import {Meteor} from "meteor/meteor";
-import Systems from "./systems";
+import Systems from "./Systems";
 
 Meteor.publish("systems", () => {
     return Systems.find();

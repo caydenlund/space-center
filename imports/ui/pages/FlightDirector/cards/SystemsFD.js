@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import classnames from "classnames";
 import Constants from "../../../../api/constants/constants";
 
-import CardFD from "./cardFD";
+import CardFD from "./CardFD";
 
 export default class SystemsFD extends Component {
     static removeSystem(system) {
