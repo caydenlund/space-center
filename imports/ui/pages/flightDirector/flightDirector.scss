@@ -1,7 +1,7 @@
 @import "../../styles/colors/colors";
 
 $background-color: color("grey", 8);
-$border-color:lighten($primary-color, 30%);
+$border-color: lighten($primary-color, 30%);
 $title-color: lighten($primary-color, 40%);
 
 #FlightDirector {
@@ -59,6 +59,7 @@ $title-color: lighten($primary-color, 40%);
         text-align: center;
         margin-bottom: 15px;
       }
+
       .systemsList {
         .system {
           cursor: pointer;
@@ -75,6 +76,7 @@ $title-color: lighten($primary-color, 40%);
           color: $error-color;
         }
       }
+
       .add-system {
         margin: 0;
         position: absolute;

@@ -6,7 +6,6 @@ import {mount} from 'react-mounter';
 import {_} from "meteor/underscore";
 
 import Constants from "../../api/constants/constants";
-
 // Import pages
 import FlightDirector from "../../ui/pages/flightDirector/flightDirector";
 import Index from "../../ui/pages/index/index";

@@ -6,7 +6,6 @@ import socket from "../../../startup/client/socket";
 import Systems from "../../../api/systems/systems";
 
 import "./flightDirector.scss";
-
 // Import cards
 import CardFD from "./cards/cardFD";
 import SystemsFD from "./cards/systemsFD";

@@ -8,6 +8,10 @@ import Button from "../../components/button/button";
 import ButtonRow from "../../components/button-row/button-row";
 
 export default class Index extends Component {
+    static navigate(page, params) {
+        FlowRouter.go(page, params);
+    }
+
     fullScreenButton() {
         let fullScreenButton = [];
         if (!!(document.body.webkitRequestFullScreen) && !((window.fullScreen) ||
@@ -29,10 +33,6 @@ export default class Index extends Component {
         setTimeout(() => {
             this.forceUpdate();
         }, 100);
-    }
-
-    static navigate(page, params) {
-        FlowRouter.go(page, params);
     }
 
     stationList() {

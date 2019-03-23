@@ -6,6 +6,21 @@ import Constants from "../../../../api/constants/constants";
 import CardFD from "./cardFD";
 
 export default class SystemsFD extends Component {
+    static removeSystem(system) {
+        Meteor.call("systems.removeSystem", system);
+    }
+
+    static pressKey(event) {
+        if (event.keyCode === 13 && !!event.target.value) {
+            Meteor.call("systems.addSystem", {
+                name: event.target.value,
+                power: 100,
+                levels: [100]
+            });
+            event.target.value = "";
+        }
+    }
+
     system(system) {
         let power = system.power;
         let classes = ["system"];
@@ -25,21 +40,6 @@ export default class SystemsFD extends Component {
                 <div className={"right"}>{power}</div>
             </div>
         );
-    }
-
-    static removeSystem(system) {
-        Meteor.call("systems.removeSystem", system);
-    }
-
-    static pressKey(event) {
-        if (event.keyCode === 13 && !!event.target.value) {
-            Meteor.call("systems.addSystem", {
-                name: event.target.value,
-                power: 100,
-                levels: [100]
-            });
-            event.target.value = "";
-        }
     }
 
     systemsList() {

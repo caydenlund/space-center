@@ -12,6 +12,10 @@ import Line from "../../components/line/line";
 import "./mainViewScreen.scss";
 
 class MainViewScreen extends Component {
+    static getTransparent(screen) {
+        return (screen === "Radar");
+    }
+
     componentDidMount() {
         socket.on("mvs.shake", (data) => {
             let magnitude = data;
@@ -50,14 +54,11 @@ class MainViewScreen extends Component {
         return renderedScreen;
     }
 
-    static getTransparent(screen) {
-        return (screen === "Radar");
-    }
-
     render() {
         return (
             <div id={"MainViewScreen"}>
-                <MainViewScreenHeader screen={this.props.screen} transparent={MainViewScreen.getTransparent(this.props.screen)}/>
+                <MainViewScreenHeader screen={this.props.screen}
+                                      transparent={MainViewScreen.getTransparent(this.props.screen)}/>
                 <div id={"screen"}>
                     {this.getScreen()}
                 </div>

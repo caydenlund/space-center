@@ -4,20 +4,34 @@ import {Session} from "meteor/session";
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {_} from "meteor/underscore";
 import socket from "../../../startup/client/socket";
-
 // Import API
 import Constants from "../../../api/constants/constants";
-
 // Import screens
 import LoginScreen from "../../screens/login/login";
 import NotFoundScreen from "../../screens/notFound/notFound";
-
 // Import components
 import Line from "../../components/line/line";
 
 import "./station.scss";
 
 class Station extends Component {
+    static getScreen(screen) {
+        let renderedScreen = "";
+        switch (screen) {
+            case "Login":
+                renderedScreen = (<LoginScreen/>);
+                break;
+            default:
+                renderedScreen = (<NotFoundScreen/>);
+                break;
+        }
+        return renderedScreen;
+    }
+
+    static setHidden() {
+        Session.set("hidden", false);
+    }
+
     componentDidMount() {
         socket.on("station.shake", (data) => {
             let magnitude = data;
@@ -46,26 +60,9 @@ class Station extends Component {
         });
     }
 
-    static getScreen(screen) {
-        let renderedScreen = "";
-        switch (screen) {
-            case "Login":
-                renderedScreen = (<LoginScreen/>);
-                break;
-            default:
-                renderedScreen = (<NotFoundScreen/>);
-                break;
-        }
-        return renderedScreen;
-    }
-
     getHidden(item) {
         Session.setDefault("hidden", false);
         return ((item === "screenList") ? !this.props.hidden : this.props.hidden) ? "hidden" : "";
-    }
-
-    static setHidden() {
-        Session.set("hidden", false);
     }
 
     render() {
@@ -120,6 +117,15 @@ class ScreenList extends Component {
         Session.set("hidden", false);
     }
 
+    static screenList(station) {
+        let currStation = _.findWhere(Constants.Stations, {name: station});
+        if (typeof currStation == "undefined") {
+            console.log("Invalid station: " + station);
+            return [];
+        }
+        return currStation.screens;
+    }
+
     getScreens(screenList) {
         let screens = [];
         for (let screen of screenList) {
@@ -130,15 +136,6 @@ class ScreenList extends Component {
             );
         }
         return screens;
-    }
-
-    static screenList(station) {
-        let currStation = _.findWhere(Constants.Stations, {name: station});
-        if (typeof currStation == "undefined") {
-            console.log("Invalid station: " + station);
-            return [];
-        }
-        return currStation.screens;
     }
 
     render() {
