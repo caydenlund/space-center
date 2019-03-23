@@ -1,21 +1,21 @@
 const defaultSystems = [
     {
         name: "Warp Drive",
-        power: 100,
-        levels: [100],
-        enabled: true
+        key: "warpDrive",
+        enabled: true,
+        powerUse: 100
     },
     {
         name: "Master Coolant Router",
-        power: 100,
-        levels: [100],
-        enabled: true
+        key: "coolantRouter",
+        enabled: true,
+        powerUse: 100
     },
     {
         name: "Laser Fluid Compressor",
-        power: 100,
-        levels: [100],
-        enabled: true
+        key: "fluidCompressor",
+        enabled: true,
+        powerUse: 100
     }
 ];
 

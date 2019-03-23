@@ -4,6 +4,8 @@ $background-color: color("grey", 8);
 $border-color: lighten($primary-color, 30%);
 $title-color: lighten($primary-color, 40%);
 
+$hidden-color: color("blue", 2);
+
 #FlightDirector {
   position: fixed;
   top: 0;
@@ -68,11 +70,17 @@ $title-color: lighten($primary-color, 40%);
           margin-bottom: 10px;
         }
 
-        .system.underpowered {
-          color: $warning-color;
+        .system.hidden {
+          .right {
+            color: $hidden-color;
+          }
         }
 
         .system.disabled {
+          color: $warning-color;
+        }
+
+        .system.broken {
           color: $error-color;
         }
       }

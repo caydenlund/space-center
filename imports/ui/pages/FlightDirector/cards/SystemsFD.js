@@ -14,22 +14,27 @@ export default class SystemsFD extends Component {
         if (event.keyCode === 13 && !!event.target.value) {
             Meteor.call("systems.addSystem", {
                 name: event.target.value,
-                power: 100,
-                levels: [100]
+                key: event.target.value,
+                hidden: true,
+                powerUse: 100
             });
             event.target.value = "";
         }
     }
 
     system(system) {
-        let power = system.power;
+        let power = "0/" + system.powerUse;
         let classes = ["system"];
-        if (system.power < system.levels[system.levels.length - 1]) {
-            classes.push("underpowered");
-            power = system.power + " / " + system.levels[system.levels.length - 1];
+        if (system.hidden) {
+            classes.push("hidden");
         }
-        if (system.broken || !system.enabled) {
+        if (system.broken) {
+            classes.push("broken");
+        }
+        else if (!system.enabled) {
             classes.push("disabled");
+        } else {
+            power = system.powerUse + "/" + system.powerUse;
         }
         return (
             <div key={system.name} className={classnames(classes)}
@@ -53,8 +58,8 @@ export default class SystemsFD extends Component {
     totalPower() {
         let total = 0;
         this.props.systems.forEach((system) => {
-            if (system.enabled && !system.broken) {
-                total += system.power;
+            if (system.enabled) {
+                total += system.powerUse;
             }
         });
         return total;

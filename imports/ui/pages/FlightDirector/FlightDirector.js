@@ -38,7 +38,7 @@ class FlightDirector extends Component {
 }
 
 export default withTracker(() => {
-    Meteor.subscribe("systems");
+    Meteor.subscribe("systems", true);
 
     return {
         systems: Systems.find().fetch()

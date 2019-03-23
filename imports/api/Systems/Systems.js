@@ -6,6 +6,7 @@ const Systems = new Mongo.Collection("systems");
 // noinspection JSUndefinedPropertyAssignment
 Systems.schema = new SimpleSchema({
     name: String,
+    key: String,
     broken: {
         type: Boolean,
         defaultValue: false
@@ -14,8 +15,11 @@ Systems.schema = new SimpleSchema({
         type: Boolean,
         defaultValue: false
     },
-    levels: [Number],
-    power: Number
+    hidden: {
+        type: Boolean,
+        defaultValue: true
+    },
+    powerUse: Number
 });
 
 export default Systems;
