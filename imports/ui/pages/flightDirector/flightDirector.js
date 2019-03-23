@@ -12,7 +12,7 @@ import CardFD from "./cards/cardFD";
 import SystemsFD from "./cards/systemsFD";
 
 class FlightDirector extends Component {
-    broadcast(name, data) {
+    static broadcast(name, data) {
         socket.emit("broadcast", {name, data});
     }
 

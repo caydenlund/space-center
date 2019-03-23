@@ -50,14 +50,14 @@ class MainViewScreen extends Component {
         return renderedScreen;
     }
 
-    getTransparent(screen) {
+    static getTransparent(screen) {
         return (screen === "Radar");
     }
 
     render() {
         return (
             <div id={"MainViewScreen"}>
-                <MainViewScreenHeader screen={this.props.screen} transparent={this.getTransparent(this.props.screen)}/>
+                <MainViewScreenHeader screen={this.props.screen} transparent={MainViewScreen.getTransparent(this.props.screen)}/>
                 <div id={"screen"}>
                     {this.getScreen()}
                 </div>

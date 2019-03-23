@@ -10,8 +10,6 @@ import ButtonRow from "../../components/button-row/button-row";
 export default class Index extends Component {
     fullScreenButton() {
         let fullScreenButton = [];
-        // noinspection JSUnresolvedVariable
-        // noinspection JSUnresolvedVariable
         if (!!(document.body.webkitRequestFullScreen) && !((window.fullScreen) ||
             (window.innerWidth === screen.width && window.innerHeight === screen.height))) {
             fullScreenButton = (
@@ -33,7 +31,7 @@ export default class Index extends Component {
         }, 100);
     }
 
-    navigate(page, params) {
+    static navigate(page, params) {
         FlowRouter.go(page, params);
     }
 
@@ -42,7 +40,7 @@ export default class Index extends Component {
         Constants.Stations.forEach((station) => {
             stations.push(
                 <Button className={"col c2"} key={station.name} onClick={() => {
-                    this.navigate("Station", {station: station.name});
+                    Index.navigate("Station", {station: station.name});
                 }}>
                     {station.name}
                 </Button>
@@ -60,12 +58,12 @@ export default class Index extends Component {
                 </ButtonRow>
                 <ButtonRow id={"pages"}>
                     <Button className={"col c6"} onClick={() => {
-                        this.navigate("Page", {page: "fd"})
+                        Index.navigate("Page", {page: "fd"})
                     }}>
                         Flight Director
                     </Button>
                     <Button className={"col c6"} onClick={() => {
-                        this.navigate("Page", {page: "mvs"})
+                        Index.navigate("Page", {page: "mvs"})
                     }}>
                         Main View Screen
                     </Button>

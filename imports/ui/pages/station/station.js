@@ -46,7 +46,7 @@ class Station extends Component {
         });
     }
 
-    getScreen(screen) {
+    static getScreen(screen) {
         let renderedScreen = "";
         switch (screen) {
             case "Login":
@@ -64,21 +64,21 @@ class Station extends Component {
         return ((item === "screenList") ? !this.props.hidden : this.props.hidden) ? "hidden" : "";
     }
 
-    setHidden() {
+    static setHidden() {
         Session.set("hidden", false);
     }
 
     render() {
         const station = this.props.station;
         const screen = this.props.screen;
-        const renderedScreen = this.getScreen(screen);
+        const renderedScreen = Station.getScreen(screen);
         return (
             <div id={"Station"}>
                 <StationHeader station={station} screen={screen} className={this.getHidden(("header"))}/>
                 <ScreenList station={station} className={this.getHidden("screenList")}/>
                 <div id={"screen"} className={this.getHidden("screen")}>
                     {renderedScreen}
-                    <div id={"hiddenTarget"} onClick={this.setHidden}>
+                    <div id={"hiddenTarget"} onClick={Station.setHidden}>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ class Station extends Component {
 }
 
 class StationHeader extends Component {
-    setHidden(hidden) {
+    static setHidden(hidden) {
         Session.set("hidden", hidden);
     }
 
@@ -101,7 +101,7 @@ class StationHeader extends Component {
                     {Constants.shipName}
                 </div>
                 <div className={"right screen"} onClick={() => {
-                    this.setHidden(true)
+                    StationHeader.setHidden(true)
                 }}>
                     <div>
                         {this.props.screen}
@@ -114,7 +114,7 @@ class StationHeader extends Component {
 }
 
 class ScreenList extends Component {
-    selectScreen(screen) {
+    static selectScreen(screen) {
         const route = FlowRouter.current();
         FlowRouter.go("Station", {station: route.params.station, screen});
         Session.set("hidden", false);
@@ -125,14 +125,14 @@ class ScreenList extends Component {
         for (let screen of screenList) {
             screens.push(
                 <div className={"screen"} key={screen.name} onClick={() => {
-                    this.selectScreen(screen.name);
+                    ScreenList.selectScreen(screen.name);
                 }}>{screen.name}</div>
             );
         }
         return screens;
     }
 
-    screenList(station) {
+    static screenList(station) {
         let currStation = _.findWhere(Constants.Stations, {name: station});
         if (typeof currStation == "undefined") {
             console.log("Invalid station: " + station);
@@ -144,7 +144,7 @@ class ScreenList extends Component {
     render() {
         return (
             <div id={"ScreenList"} className={this.props.className}>
-                {this.getScreens(this.screenList(this.props.station))}
+                {this.getScreens(ScreenList.screenList(this.props.station))}
             </div>
         );
     }

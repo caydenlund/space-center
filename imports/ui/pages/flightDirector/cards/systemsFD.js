@@ -19,7 +19,7 @@ export default class SystemsFD extends Component {
         return (
             <div key={system.name} className={classnames(classes)}
                  onDoubleClick={() => {
-                     this.removeSystem(system);
+                     SystemsFD.removeSystem(system);
                  }}>
                 <div className={"left"}>{system.name}</div>
                 <div className={"right"}>{power}</div>
@@ -27,11 +27,11 @@ export default class SystemsFD extends Component {
         );
     }
 
-    removeSystem(system) {
+    static removeSystem(system) {
         Meteor.call("systems.removeSystem", system);
     }
 
-    pressKey(event) {
+    static pressKey(event) {
         if (event.keyCode === 13 && !!event.target.value) {
             Meteor.call("systems.addSystem", {
                 name: event.target.value,
@@ -71,7 +71,7 @@ export default class SystemsFD extends Component {
                 </div>
                 <input className={"add-system"} type={"text"}
                        onKeyUp={(event) => {
-                           this.pressKey(event);
+                           SystemsFD.pressKey(event);
                        }}/>
             </CardFD>
         );
