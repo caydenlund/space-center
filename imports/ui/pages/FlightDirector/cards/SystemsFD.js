@@ -4,13 +4,30 @@ import classnames from "classnames";
 import Constants from "../../../../api/constants/constants";
 
 import CardFD from "./CardFD";
+import Popup from "../../../components/Popup/Popup";
 
 export default class SystemsFD extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            systemPopups: []
+        };
+    }
+
+    static createPopup(system) {
+        return (
+            <Popup key={system.name + "-popup-" + Math.floor(Math.random() * 1000)} name={system.name + "-popup"}
+                   title={system.name}>
+                {/* Contents of the system popup here */}
+            </Popup>
+        )
+    }
+
     static removeSystem(system) {
         Meteor.call("systems.removeSystem", system);
     }
 
-    static pressKey(event) {
+    static addSystem(event) {
         if (event.keyCode === 13 && !!event.target.value) {
             Meteor.call("systems.addSystem", {
                 name: event.target.value,
@@ -30,8 +47,7 @@ export default class SystemsFD extends Component {
         }
         if (system.broken) {
             classes.push("broken");
-        }
-        else if (!system.enabled) {
+        } else if (!system.enabled) {
             classes.push("disabled");
         } else {
             power = system.powerUse + "/" + system.powerUse;
@@ -39,7 +55,9 @@ export default class SystemsFD extends Component {
         return (
             <div key={system.name} className={classnames(classes)}
                  onDoubleClick={() => {
-                     SystemsFD.removeSystem(system);
+                     this.setState({
+                         systemPopups: this.state.systemPopups.concat(SystemsFD.createPopup(system))
+                     });
                  }}>
                 <div className={"left"}>{system.name}</div>
                 <div className={"right"}>{power}</div>
@@ -68,6 +86,7 @@ export default class SystemsFD extends Component {
     render() {
         return (
             <CardFD name={"Systems"} className={"systems"}>
+                {this.state.systemPopups}
                 <div className={"totalPower"}>
                     Total power: {this.totalPower()} / {Constants.totalPower}
                 </div>
@@ -76,7 +95,7 @@ export default class SystemsFD extends Component {
                 </div>
                 <input className={"add-system"} type={"text"}
                        onKeyUp={(event) => {
-                           SystemsFD.pressKey(event);
+                           SystemsFD.addSystem(event);
                        }}/>
             </CardFD>
         );

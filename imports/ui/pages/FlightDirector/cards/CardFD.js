@@ -6,7 +6,7 @@ export default class CardFD extends Component {
     render() {
         return (
             <div className={classnames("card", this.props.className)}>
-                <div className={"inner"}>
+                <div className={"innerCard"}>
                     <div className={"title"}>
                         {this.props.name}
                     </div>
