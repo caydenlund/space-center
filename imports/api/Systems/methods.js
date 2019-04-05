@@ -1,9 +1,9 @@
-import {Meteor} from "meteor/meteor";
+import { Meteor } from "meteor/meteor";
 import Systems from "./Systems";
 
 Meteor.methods({
     "systems.addSystem"(system) {
-        if (Systems.find({name: system.name}).count() === 0) {
+        if (Systems.find({ name: system.name }).count() === 0) {
             try {
                 const document = Systems.schema.clean(system);
                 Systems.schema.validate(document);
@@ -24,11 +24,11 @@ Meteor.methods({
     "systems.updateSystem"(name, properties) {
         if (!!properties.name || !!properties._id)
             return;
-        const update = {$set: properties};
+        const update = { $set: properties };
         let updateContext = Systems.schema.newContext();
-        updateContext.validate(update, {modifier: true});
+        updateContext.validate(update, { modifier: true });
         if (updateContext.isValid()) {
-            return Systems.update({name}, update);
+            return Systems.update({ name }, update);
         } else {
             console.log(updateContext.validationErrors());
         }

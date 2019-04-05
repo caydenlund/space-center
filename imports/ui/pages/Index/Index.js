@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {FlowRouter} from 'meteor/kadira:flow-router';
+import React, { Component } from 'react';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 import Constants from "../../../api/constants/constants";
 
 import "./Index.scss";
@@ -17,7 +17,8 @@ export default class Index extends Component {
         if (!!(document.body.webkitRequestFullScreen) && !((window.fullScreen) ||
             (window.innerWidth === screen.width && window.innerHeight === screen.height))) {
             fullScreenButton = (
-                <Button id={"fullscreen-btn"} onClick={this.goFullscreen.bind(this)} className={"warning"}>
+                <Button id={"fullscreen-btn"} onClick={this.goFullscreen.bind(this)}
+                        className={"warning"}>
                     Go fullscreen
                 </Button>
             );
@@ -27,6 +28,7 @@ export default class Index extends Component {
     }
 
     goFullscreen() {
+
         // noinspection JSUnresolvedVariable
         document.body.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
 
@@ -40,7 +42,7 @@ export default class Index extends Component {
         Constants.Stations.forEach((station) => {
             stations.push(
                 <Button className={"col c2"} key={station.name} onClick={() => {
-                    Index.navigate("Station", {station: station.name});
+                    Index.navigate("Station", { station: station.name });
                 }}>
                     {station.name}
                 </Button>
@@ -58,12 +60,12 @@ export default class Index extends Component {
                 </ButtonRow>
                 <ButtonRow id={"pages"}>
                     <Button className={"col c6"} onClick={() => {
-                        Index.navigate("Page", {page: "fd"})
+                        Index.navigate("Page", { page: "fd" });
                     }}>
                         Flight Director
                     </Button>
                     <Button className={"col c6"} onClick={() => {
-                        Index.navigate("Page", {page: "mvs"})
+                        Index.navigate("Page", { page: "mvs" });
                     }}>
                         Main View Screen
                     </Button>

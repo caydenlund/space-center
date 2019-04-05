@@ -1,21 +1,23 @@
-import React, {Component} from "react";
-import {withTracker} from 'meteor/react-meteor-data';
-import {Session} from "meteor/session";
-import {FlowRouter} from 'meteor/kadira:flow-router';
-import {_} from "meteor/underscore";
+import React, { Component } from "react";
+import { withTracker } from 'meteor/react-meteor-data';
+import { Session } from "meteor/session";
+import { FlowRouter } from 'meteor/kadira:flow-router';
+import { _ } from "meteor/underscore";
 import socket from "../../../startup/client/socket";
+
 // Import API
 import Constants from "../../../api/constants/constants";
+
 // Import screens
 import LoginScreen from "./screens/Login/Login";
 import NotFoundScreen from "./screens/NotFound/NotFound";
+
 // Import components
 import Line from "../../components/Line/Line";
 
 import "./Station.scss";
 
 class Station extends Component {
-    // noinspection JSRedundantSwitchStatement
     static getScreen(screen) {
         let renderedScreen = "";
         switch (screen) {
@@ -44,13 +46,14 @@ class Station extends Component {
 
             const keyframe = (magnitude) => {
                 let blur = "blur(" + magnitude / 10 + "px)";
-                let translate = "translate(" + getRandom(magnitude / 4) + "px, " + getRandom(magnitude / 4) + "px)";
+                let translate = "translate(" + getRandom(magnitude / 4) + "px, " +
+                    getRandom(magnitude / 4) + "px)";
                 station.css("filter", blur);
                 station.css("transform", translate);
                 magnitude /= 1.8;
                 if (magnitude > 1) {
                     requestAnimationFrame(() => {
-                        keyframe(magnitude)
+                        keyframe(magnitude);
                     });
                 } else {
                     station.css("filter", "blur(0)");
@@ -72,7 +75,8 @@ class Station extends Component {
         const renderedScreen = Station.getScreen(screen);
         return (
             <div id={"Station"}>
-                <StationHeader station={station} screen={screen} className={this.getHidden(("header"))}/>
+                <StationHeader station={station} screen={screen}
+                               className={this.getHidden(("header"))}/>
                 <ScreenList station={station} className={this.getHidden("screenList")}/>
                 <div id={"screen"} className={this.getHidden("screen")}>
                     {renderedScreen}
@@ -99,7 +103,7 @@ class StationHeader extends Component {
                     {Constants.shipName}
                 </div>
                 <div className={"right screen"} onClick={() => {
-                    StationHeader.setHidden(true)
+                    StationHeader.setHidden(true);
                 }}>
                     <div>
                         {this.props.screen}
@@ -114,12 +118,12 @@ class StationHeader extends Component {
 class ScreenList extends Component {
     static selectScreen(screen) {
         const route = FlowRouter.current();
-        FlowRouter.go("Station", {station: route.params.station, screen});
+        FlowRouter.go("Station", { station: route.params.station, screen });
         Session.set("hidden", false);
     }
 
     static screenList(station) {
-        let currStation = _.findWhere(Constants.Stations, {name: station});
+        let currStation = _.findWhere(Constants.Stations, { name: station });
         if (typeof currStation == "undefined") {
             console.log("Invalid Station: " + station);
             return [];
@@ -151,5 +155,5 @@ class ScreenList extends Component {
 export default withTracker(() => {
     return {
         hidden: Session.get("hidden")
-    }
+    };
 })(Station);

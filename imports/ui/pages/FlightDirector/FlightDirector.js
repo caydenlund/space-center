@@ -1,18 +1,19 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
-import {withTracker} from "meteor/react-meteor-data";
+import { withTracker } from "meteor/react-meteor-data";
 import socket from "../../../startup/client/socket";
 
 import Systems from "../../../api/Systems/Systems";
 
 import "./FlightDirector.scss";
+
 // Import cards
 import CardFD from "./cards/CardFD";
 import SystemsFD from "./cards/SystemsFD";
 
 class FlightDirector extends Component {
     static broadcast(name, data) {
-        socket.emit("broadcast", {name, data});
+        socket.emit("broadcast", { name, data });
     }
 
     render() {
@@ -38,5 +39,5 @@ export default withTracker(() => {
 
     return {
         systems: Systems.find().fetch()
-    }
+    };
 })(FlightDirector);

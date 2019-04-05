@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import classnames from "classnames";
 
 import "./Line.scss";
@@ -13,6 +13,6 @@ export default class Line extends Component {
             <div className={lineClassName}>
 
             </div>
-        )
+        );
     }
 }

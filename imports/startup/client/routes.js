@@ -1,11 +1,12 @@
-import React from 'react';
-import {FlowRouter} from 'meteor/kadira:flow-router';
-// noinspection ES6CheckImport
-import {mount} from 'react-mounter';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
-import {_} from "meteor/underscore";
+// noinspection ES6CheckImport
+import { mount } from 'react-mounter';
+
+import { _ } from "meteor/underscore";
 
 import Constants from "../../api/constants/constants";
+
 // Import pages
 import FlightDirector from "../../ui/pages/FlightDirector/FlightDirector";
 import Index from "../../ui/pages/Index/Index";
@@ -53,12 +54,12 @@ FlowRouter.route("/stations", {
 
 FlowRouter.route("/stations/:Station", {
     action(params) {
-        let station = _.findWhere(Constants.Stations, {name: params.station});
+        let station = _.findWhere(Constants.Stations, { name: params.station });
         if (typeof station == "undefined") {
             console.log("Invalid Station: " + params.station);
             FlowRouter.go("Index");
         } else {
-            FlowRouter.go("Station", {station: station.name, screen: station.screens[0].name});
+            FlowRouter.go("Station", { station: station.name, screen: station.screens[0].name });
         }
     }
 });
@@ -66,11 +67,11 @@ FlowRouter.route("/stations/:Station", {
 FlowRouter.route("/stations/:Station/:screen", {
     name: "Station",
     action(params) {
-        if (typeof _.findWhere(Constants.Stations, {name: params.station}) == "undefined") {
+        if (typeof _.findWhere(Constants.Stations, { name: params.station }) == "undefined") {
             console.log("Invalid Station: " + params.station);
             FlowRouter.go("Index");
         } else {
-            mount(Station, {station: params.station, screen: params.screen});
+            mount(Station, { station: params.station, screen: params.screen });
         }
     }
 });

@@ -22,5 +22,17 @@
       "server": "server/main.js"
     }
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.12.0",
+    "eslint-config-jquery": "^1.0.1",
+    "eslint-plugin-flowtype": "^3.5.1",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jquery": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prop-types": "^15.7.2"
+  }
 }

@@ -1,11 +1,14 @@
-import React, {Component} from "react";
-import {withTracker} from 'meteor/react-meteor-data';
-import {Session} from "meteor/session";
+import React, { Component } from "react";
+import { withTracker } from 'meteor/react-meteor-data';
+import { Session } from "meteor/session";
 import socket from "../../../startup/client/socket";
+
 // Import API
 import Constants from "../../../api/constants/constants";
+
 // Import screens
 import SplashMVS from "./screens/SplashMVS";
+
 // Import components
 import Line from "../../components/Line/Line";
 
@@ -27,13 +30,14 @@ class MainViewScreen extends Component {
 
             const keyframe = (magnitude) => {
                 let blur = "blur(" + magnitude / 10 + "px)";
-                let translate = "translate(" + getRandom(magnitude / 4) + "px, " + getRandom(magnitude / 4) + "px)";
+                let translate = "translate(" + getRandom(magnitude / 4) + "px, " +
+                    getRandom(magnitude / 4) + "px)";
                 mvs.css("filter", blur);
                 mvs.css("transform", translate);
                 magnitude /= 1.8;
                 if (magnitude > 1) {
                     requestAnimationFrame(() => {
-                        keyframe(magnitude)
+                        keyframe(magnitude);
                     });
                 } else {
                     mvs.css("filter", "blur(0)");
@@ -44,7 +48,6 @@ class MainViewScreen extends Component {
         });
     }
 
-    // noinspection JSRedundantSwitchStatement
     getScreen() {
         let renderedScreen = <SplashMVS/>;
         switch (this.props.screen) {
@@ -58,8 +61,9 @@ class MainViewScreen extends Component {
     render() {
         return (
             <div id={"MainViewScreen"}>
-                <MainViewScreenHeader screen={this.props.screen}
-                                      transparent={MainViewScreen.getTransparent(this.props.screen)}/>
+                <MainViewScreenHeader
+                    screen={this.props.screen}
+                    transparent={MainViewScreen.getTransparent(this.props.screen)}/>
                 <div id={"screen"}>
                     {this.getScreen()}
                 </div>
@@ -70,9 +74,11 @@ class MainViewScreen extends Component {
 
 class MainViewScreenHeader extends Component {
     render() {
+
         // noinspection JSUnresolvedVariable
         return (
-            <div id={"MainViewScreenHeader"} className={(this.props.transparent) ? "transparent" : ""}>
+            <div id={"MainViewScreenHeader"}
+                 className={(this.props.transparent) ? "transparent" : ""}>
                 <div className={"outer left"}>
                     <div className={"parallelogram"}>
                     </div>
@@ -93,12 +99,12 @@ class MainViewScreenHeader extends Component {
                     <Line/>
                 </div>
             </div>
-        )
+        );
     }
 }
 
 export default withTracker(() => {
     return {
         screen: Session.get("screen")
-    }
+    };
 })(MainViewScreen);

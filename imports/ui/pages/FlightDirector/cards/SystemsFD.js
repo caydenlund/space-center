@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 import classnames from "classnames";
 import Constants from "../../../../api/constants/constants";
@@ -24,7 +24,7 @@ class SystemPopup extends Component {
         update[property] = !this.state.system[property];
         let system = this.state.system;
         system[property] = !system[property];
-        this.setState({system});
+        this.setState({ system });
         Meteor.call("systems.updateSystem", this.state.system.name, update);
     }
 
@@ -65,8 +65,9 @@ class SystemPopup extends Component {
                                            return;
                                        let system = this.state.system;
                                        system.powerUse = powerUse;
-                                       this.setState({system});
-                                       Meteor.call("systems.updateSystem", this.state.system.name, {powerUse});
+                                       this.setState({ system });
+                                       Meteor.call("systems.updateSystem",
+                                           this.state.system.name, { powerUse });
                                    }
                                }}/>
                     </div>
@@ -80,14 +81,15 @@ class SystemPopup extends Component {
                                        event.target.value = "";
                                        let system = this.state.system;
                                        system.key = key;
-                                       this.setState({system});
-                                       Meteor.call("systems.updateSystem", this.state.system.name, {key});
+                                       this.setState({ system });
+                                       Meteor.call("systems.updateSystem",
+                                           this.state.system.name, { key });
                                    }
                                }}/>
                     </div>
                 </div>
             </Popup>
-        )
+        );
     }
 }
 
@@ -101,8 +103,9 @@ export default class SystemsFD extends Component {
 
     static createPopup(system) {
         return (
-            <SystemPopup system={system} key={system.name + "-popup-" + Math.floor(Math.random() * 1000)}/>
-        )
+            <SystemPopup system={system}
+                         key={system.name + "-popup-" + Math.floor(Math.random() * 1000)}/>
+        );
     }
 
     static addSystem(event) {
@@ -134,7 +137,7 @@ export default class SystemsFD extends Component {
             <div key={system.name} className={classnames(classes)}
                  onMouseDown={(event) => {
                      if (event.button === 1) {
-                         Meteor.call("systems.removeSystem", {name: system.name});
+                         Meteor.call("systems.removeSystem", { name: system.name });
                      }
                  }}
                  onDoubleClick={() => {
