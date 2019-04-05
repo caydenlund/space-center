@@ -1,4 +1,4 @@
-import Constants from "../../api/constants/constants";
+import Constants from "../../api/Constants/Constants";
 
 const startup = () => {
     Constants.defaultSystems.forEach((system) => {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import classnames from "classnames";
-import Constants from "../../../../api/constants/constants";
+import Constants from "../../../../api/Constants/Constants";
 
 import CardFD from "./CardFD";
 import Popup from "../../../components/Popup/Popup";

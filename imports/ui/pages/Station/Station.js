@@ -6,7 +6,7 @@ import { _ } from "meteor/underscore";
 import socket from "../../../startup/client/socket";
 
 // Import API
-import Constants from "../../../api/constants/constants";
+import Constants from "../../../api/Constants/Constants";
 
 // Import screens
 import LoginScreen from "./screens/Login/Login";

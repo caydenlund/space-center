@@ -1,4 +1,4 @@
-const defaultSystems = [
+const DefaultSystems = [
     {
         name: "Warp Drive",
         key: "warpDrive",
@@ -19,4 +19,4 @@ const defaultSystems = [
     }
 ];
 
-export default defaultSystems;
+export default DefaultSystems;

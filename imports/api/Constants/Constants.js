@@ -1,10 +1,10 @@
 import Stations from "./Stations";
-import defaultSystems from "./DefaultSystems";
+import DefaultSystems from "./DefaultSystems";
 
 const Constants = {
     shipName: "FS Vanguard",
     totalPower: 1000,
-    defaultSystems,
+    defaultSystems: DefaultSystems,
     Stations
 };
 

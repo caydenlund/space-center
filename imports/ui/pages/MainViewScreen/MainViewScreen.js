@@ -4,7 +4,7 @@ import { Session } from "meteor/session";
 import socket from "../../../startup/client/socket";
 
 // Import API
-import Constants from "../../../api/constants/constants";
+import Constants from "../../../api/Constants/Constants";
 
 // Import screens
 import SplashMVS from "./screens/SplashMVS";
