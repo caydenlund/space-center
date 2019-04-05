@@ -19,7 +19,10 @@ Systems.schema = new SimpleSchema({
         type: Boolean,
         defaultValue: true
     },
-    powerUse: Number
+    powerUse: {
+        type: Number,
+        min: 0
+    }
 });
 
 export default Systems;

@@ -93,5 +93,58 @@ $hidden-color: color("blue", 2);
         left: 0;
       }
     }
+
+    .popup {
+      .popup-content {
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        * {
+          flex-grow: .25;
+        }
+
+        .switches-box {
+          padding: 20px;
+          border: 2px solid grey;
+          border-radius: 5px;
+
+          .switches-box-row {
+            padding-bottom: 40px;
+
+            .switch-title {
+              float: left;
+              margin-right: 20px;
+            }
+
+            .switch-container {
+              float: right;
+            }
+          }
+        }
+
+        .input-text-box {
+          padding: 20px;
+          border: 2px solid grey;
+          border-radius: 5px;
+
+          .input-text-box-row {
+            padding-bottom: 40px;
+
+            .input-text-title {
+              float: left;
+              margin-right: 20px;
+            }
+
+            .input-text {
+              float: right;
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -14,11 +14,23 @@ Meteor.methods({
         }
     },
     "systems.removeSystem"(system) {
-        Systems.remove(system);
+        return Systems.remove(system);
     },
     "systems.clearSystems"() {
         Systems.find().fetch().forEach((system) => {
             Systems.remove(system);
         });
+    },
+    "systems.updateSystem"(name, properties) {
+        if (!!properties.name || !!properties._id)
+            return;
+        const update = {$set: properties};
+        let updateContext = Systems.schema.newContext();
+        updateContext.validate(update, {modifier: true});
+        if (updateContext.isValid()) {
+            return Systems.update({name}, update);
+        } else {
+            console.log(updateContext.validationErrors());
+        }
     }
 });

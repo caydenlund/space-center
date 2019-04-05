@@ -5,6 +5,91 @@ import Constants from "../../../../api/constants/constants";
 
 import CardFD from "./CardFD";
 import Popup from "../../../components/Popup/Popup";
+import Switch from "../../../components/Switch/Switch";
+import Button from "../../../components/Button/Button";
+
+class SystemPopup extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentWillMount() {
+        this.setState({
+            system: this.props.system
+        });
+    }
+
+    clickSwitch(property) {
+        let update = {};
+        update[property] = !this.state.system[property];
+        let system = this.state.system;
+        system[property] = !system[property];
+        this.setState({system});
+        Meteor.call("systems.updateSystem", this.state.system.name, update);
+    }
+
+    render() {
+        return (
+            <Popup name={this.state.system.name + "-popup"}
+                   title={this.state.system.name}>
+                <div className="switches-box">
+                    <div className={"switches-box-row"} onClick={() => this.clickSwitch("hidden")}>
+                        <div className={"switch-title"}>Visible:</div>
+                        <Switch enabled={!this.state.system.hidden}/>
+                    </div>
+                    <div className={"switches-box-row"} onClick={() => this.clickSwitch("enabled")}>
+                        <div className={"switch-title"}>Enabled:</div>
+                        <Switch enabled={this.state.system.enabled}/>
+                    </div>
+                    <div className={"switches-box-row"} onClick={() => this.clickSwitch("broken")}>
+                        <div className={"switch-title"}>Broken:</div>
+                        <Switch enabled={this.state.system.broken}/>
+                    </div>
+                </div>
+                <Button className={"delete-button error"} onClick={() => {
+                    Meteor.call("systems.removeSystem", this.state.system);
+                    $("[name=\"" + this.state.system.name + "-popup\"]").remove();
+                }}>
+                    Delete System
+                </Button>
+                <div className={"input-text-box"}>
+                    <div className={"input-text-box-row"}>
+                        <div className={"input-text-title"}>Power Usage:</div>
+                        <input className={"input-text input-powerUse"} type={"text"}
+                               placeholder={this.state.system.powerUse}
+                               onKeyPress={(event) => {
+                                   if (event.key === "Enter") {
+                                       let powerUse = parseInt(event.target.value);
+                                       event.target.value = "";
+                                       if (isNaN(powerUse))
+                                           return;
+                                       let system = this.state.system;
+                                       system.powerUse = powerUse;
+                                       this.setState({system});
+                                       Meteor.call("systems.updateSystem", this.state.system.name, {powerUse});
+                                   }
+                               }}/>
+                    </div>
+                    <div className={"input-text-box-row"}>
+                        <div className={"input-text-title"}>Key:</div>
+                        <input className={"input-text input-key"} type={"text"}
+                               placeholder={this.state.system.key}
+                               onKeyPress={(event) => {
+                                   if (event.key === "Enter") {
+                                       let key = event.target.value;
+                                       event.target.value = "";
+                                       let system = this.state.system;
+                                       system.key = key;
+                                       this.setState({system});
+                                       Meteor.call("systems.updateSystem", this.state.system.name, {key});
+                                   }
+                               }}/>
+                    </div>
+                </div>
+            </Popup>
+        )
+    }
+}
 
 export default class SystemsFD extends Component {
     constructor(props) {
@@ -16,15 +101,8 @@ export default class SystemsFD extends Component {
 
     static createPopup(system) {
         return (
-            <Popup key={system.name + "-popup-" + Math.floor(Math.random() * 1000)} name={system.name + "-popup"}
-                   title={system.name}>
-                {/* Contents of the system popup here */}
-            </Popup>
+            <SystemPopup system={system} key={system.name + "-popup-" + Math.floor(Math.random() * 1000)}/>
         )
-    }
-
-    static removeSystem(system) {
-        Meteor.call("systems.removeSystem", system);
     }
 
     static addSystem(event) {
@@ -54,6 +132,11 @@ export default class SystemsFD extends Component {
         }
         return (
             <div key={system.name} className={classnames(classes)}
+                 onMouseDown={(event) => {
+                     if (event.button === 1) {
+                         Meteor.call("systems.removeSystem", {name: system.name});
+                     }
+                 }}
                  onDoubleClick={() => {
                      this.setState({
                          systemPopups: this.state.systemPopups.concat(SystemsFD.createPopup(system))
