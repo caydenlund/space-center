@@ -13,11 +13,11 @@ export default class Popup extends Component {
         $("[name=\"" + this.props.name + "\"]").remove();
     }
 
-    componentDidMount(){
+    componentDidMount() {
         document.addEventListener("keydown", this.escPress.bind(this), false);
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         document.removeEventListener("keydown", this.escPress.bind(this), false);
     }
 

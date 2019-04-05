@@ -44,6 +44,7 @@ class MainViewScreen extends Component {
         });
     }
 
+    // noinspection JSRedundantSwitchStatement
     getScreen() {
         let renderedScreen = <SplashMVS/>;
         switch (this.props.screen) {

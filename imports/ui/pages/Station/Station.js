@@ -15,6 +15,7 @@ import Line from "../../components/Line/Line";
 import "./Station.scss";
 
 class Station extends Component {
+    // noinspection JSRedundantSwitchStatement
     static getScreen(screen) {
         let renderedScreen = "";
         switch (screen) {
