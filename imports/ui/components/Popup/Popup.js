@@ -23,17 +23,17 @@ export default class Popup extends Component {
 
     render() {
         return (
-            <div className={"Popup "} name={this.props.name}>
-                <div className={"background"} onClick={this.hide.bind(this)}>
+            <div className={"popup "} name={this.props.name}>
+                <div className={"popup-background"} onClick={this.hide.bind(this)}>
                 </div>
-                <div className={"inner"}>
+                <div className={"popup-inner"}>
                     <div className={"js-exitButton"} onClick={this.hide.bind(this)}>
                         &times;
                     </div>
-                    <div className={"popupTitle"}>
+                    <div className={"popup-title"}>
                         {this.props.title}
                     </div>
-                    <div className={"content"}>
+                    <div className={"popup-content"}>
                         {this.props.children}
                     </div>
                 </div>
