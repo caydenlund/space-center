@@ -176,7 +176,7 @@ export default class SystemsFD extends Component {
                 <div className={"systemsList"}>
                     {this.systemsList()}
                 </div>
-                <input className={"add-system"} type={"text"}
+                <input className={"add-system"} type={"text"} placeholder={"New System"}
                        onKeyUp={(event) => {
                            SystemsFD.addSystem(event);
                        }}/>

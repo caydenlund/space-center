@@ -18,20 +18,16 @@ class FlightDirector extends Component {
     render() {
         return (
             <div id={"FlightDirector"}>
-                <div className={"row"}>
-                    <SystemsFD systems={this.props.systems}/>
-                    <CardFD/>
-                    <CardFD/>
-                    <CardFD/>
-                    <CardFD/>
-                </div>
-                <div className={"row"}>
-                    <CardFD/>
-                    <CardFD/>
-                    <CardFD/>
-                    <CardFD/>
-                    <CardFD/>
-                </div>
+                <SystemsFD systems={this.props.systems}/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
+                <CardFD/>
             </div>
         );
     }

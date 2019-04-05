@@ -6,11 +6,11 @@ export default class CardFD extends Component {
     render() {
         return (
             <div className={classnames("card", this.props.className)}>
-                <div className={"innerCard"}>
-                    <div className={"title"}>
+                <div className={"inner-card"}>
+                    <div className={"card-title"}>
                         {this.props.name}
                     </div>
-                    <div className={"content"}>
+                    <div className={"card-content"}>
                         {this.props.children}
                     </div>
                 </div>

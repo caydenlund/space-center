@@ -15,83 +15,85 @@ $hidden-color: color("blue", 2);
   background: $background-color;
   overflow-x: hidden;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
 
-  .row {
-    width: 100vw;
-    height: 60vh;
-    position: relative;
+  input[type="text"] {
+    border: 2px solid $border-color;
+    padding: 5px;
+  }
+
+  .card {
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 70vh;
+    width: 20%;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    font-size: 20px;
 
-    .card {
+    .inner-card {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
       height: 100%;
-      width: 20%;
-      float: left;
-      margin: 0;
-      padding: 0;
-      font-size: 20px;
+      border: 2px solid $border-color;
+      border-radius: 5px;
+      overflow: hidden;
 
-      .innerCard {
-        position: relative;
-        box-sizing: border-box;
-        $size: 88%;
-        width: $size;
-        height: $size;
-        margin: (100% - $size) / 2;
-        border: 2px solid $border-color;
-        border-radius: 5px;
+      .card-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 24px;
+        border-bottom: 2px solid $border-color;
+        color: $title-color;
+      }
 
-        .title {
-          width: 100%;
-          text-align: center;
-          padding: 10px 0;
-          font-size: 24px;
-          border-bottom: 2px solid $border-color;
-          color: $title-color;
+      .card-content {
+        padding: 20px;
+      }
+    }
+  }
+
+  .card.systems {
+    .totalPower {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .systemsList {
+      .system {
+        cursor: pointer;
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+        .right {
+          margin-left: 10px;
         }
+      }
 
-        .content {
-          padding: 20px;
+      .system.hidden {
+        .right {
+          color: $hidden-color;
         }
+      }
+
+      .system.disabled {
+        color: $warning-color;
+      }
+
+      .system.broken {
+        color: $error-color;
       }
     }
 
-    .card.systems {
-      .totalPower {
-        text-align: center;
-        margin-bottom: 15px;
-      }
-
-      .systemsList {
-        .system {
-          cursor: pointer;
-          float: left;
-          width: 100%;
-          margin-bottom: 10px;
-        }
-
-        .system.hidden {
-          .right {
-            color: $hidden-color;
-          }
-        }
-
-        .system.disabled {
-          color: $warning-color;
-        }
-
-        .system.broken {
-          color: $error-color;
-        }
-      }
-
-      .add-system {
-        margin: 0;
-        position: absolute;
-        width: calc(100% - 4px);
-        bottom: 0;
-        left: 0;
-      }
+    .add-system {
+      margin: 0;
+      position: absolute;
+      width: calc(100% - 4px);
+      bottom: -2px;
+      left: -2px;
     }
 
     .popup {
@@ -131,7 +133,7 @@ $hidden-color: color("blue", 2);
           border-radius: 5px;
 
           .input-text-box-row {
-            padding-bottom: 40px;
+            padding-bottom: 60px;
 
             .input-text-title {
               float: left;
