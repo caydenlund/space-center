@@ -1,93 +1,95 @@
 @import "../../../styles/colors/colors";
 
-.card.systems {
-  .totalPower {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .systemsList {
-    .system {
-      cursor: pointer;
-      float: left;
-      width: 100%;
-      margin-bottom: 20px;
-
-      .right {
-        margin-left: 10px;
-      }
+#FlightDirector {
+  .card.systems {
+    .totalPower {
+      text-align: center;
+      margin-bottom: 15px;
     }
 
-    .system.hidden {
-      .right {
-        color: $hidden-color;
-      }
-    }
+    .systemsList {
+      .system {
+        cursor: pointer;
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
 
-    .system.disabled {
-      color: $warning-color;
-    }
-
-    .system.broken {
-      color: $error-color;
-    }
-  }
-
-  .add-system {
-    margin: 0;
-    position: absolute;
-    width: calc(100% - 4px);
-    bottom: -2px;
-    left: -2px;
-  }
-
-  .popup {
-    .popup-content {
-      padding: 50px;
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-wrap: wrap;
-
-      * {
-        flex-grow: .25;
-      }
-
-      .switches-box {
-        padding: 20px;
-        border: 2px solid grey;
-        border-radius: 5px;
-
-        .switches-box-row {
-          padding-bottom: 40px;
-
-          .switch-title {
-            float: left;
-            margin-right: 20px;
-          }
-
-          .switch-container {
-            float: right;
-          }
+        .right {
+          margin-left: 10px;
         }
       }
 
-      .input-text-box {
-        padding: 20px;
-        border: 2px solid grey;
-        border-radius: 5px;
+      .system.hidden {
+        .right {
+          color: $hidden-color;
+        }
+      }
 
-        .input-text-box-row {
-          padding-bottom: 60px;
+      .system.disabled {
+        color: $warning-color;
+      }
 
-          .input-text-title {
-            float: left;
-            margin-right: 20px;
+      .system.broken {
+        color: $error-color;
+      }
+    }
+
+    .add-system {
+      margin: 0;
+      position: absolute;
+      width: calc(100% - 4px);
+      bottom: -2px;
+      left: -2px;
+    }
+
+    .popup {
+      .popup-content {
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        * {
+          flex-grow: .25;
+        }
+
+        .switches-box {
+          padding: 20px;
+          border: 2px solid grey;
+          border-radius: 5px;
+
+          .switches-box-row {
+            padding-bottom: 40px;
+
+            .switch-title {
+              float: left;
+              margin-right: 20px;
+            }
+
+            .switch-container {
+              float: right;
+            }
           }
+        }
 
-          .input-text {
-            float: right;
-            width: 200px;
+        .input-text-box {
+          padding: 20px;
+          border: 2px solid grey;
+          border-radius: 5px;
+
+          .input-text-box-row {
+            padding-bottom: 60px;
+
+            .input-text-title {
+              float: left;
+              margin-right: 20px;
+            }
+
+            .input-text {
+              float: right;
+              width: 200px;
+            }
           }
         }
       }

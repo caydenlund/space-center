@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import classnames from "classnames";
 
+import "./CardFD.scss";
+
 export default class CardFD extends Component {
     render() {
         return (

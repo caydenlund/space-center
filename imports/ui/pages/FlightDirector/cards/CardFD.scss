@@ -1,0 +1,36 @@
+@import "../../../styles/colors/colors";
+
+#FlightDirector {
+  .card {
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 70vh;
+    width: 20%;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+
+    .inner-card {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $fd-border-color;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .card-title {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 24px;
+        border-bottom: 2px solid $fd-border-color;
+        color: $fd-title-color;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+    }
+  }
+}
