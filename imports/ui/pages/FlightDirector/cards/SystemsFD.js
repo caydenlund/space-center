@@ -8,6 +8,8 @@ import Popup from "../../../components/Popup/Popup";
 import Switch from "../../../components/Switch/Switch";
 import Button from "../../../components/Button/Button";
 
+import "./SystemsFD.scss";
+
 class SystemPopup extends Component {
     constructor(props) {
         super(props);
