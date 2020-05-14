@@ -9,12 +9,12 @@
     "@babel/runtime": "^7.9.6",
     "classnames": "^2.2.6",
     "meteor-node-stubs": "^0.4.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-mounter": "^1.2.0",
-    "simpl-schema": "^1.5.5",
-    "socket.io": "^2.2.0",
-    "socket.io-client": "^2.2.0"
+    "simpl-schema": "^1.7.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   },
   "meteor": {
     "mainModule": {
@@ -23,16 +23,16 @@
     }
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.12.0",
     "eslint-config-jquery": "^1.0.1",
-    "eslint-plugin-flowtype": "^3.5.1",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jquery": "^1.5.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-flowtype": "^3.13.0",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jquery": "^1.5.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
     "prop-types": "^15.7.2"
   }
 }
