@@ -8,8 +8,8 @@ import Systems from "../../../api/Systems/Systems";
 import "./FlightDirector.scss";
 
 // Import cards
-import CardFD from "./cards/CardFD";
-import SystemsFD from "./cards/SystemsFD";
+import CardFD from "./cards/CardFD/CardFD";
+import SystemsFD from "./cards/SystemsFD/SystemsFD";
 
 class FlightDirector extends Component {
     static broadcast(name, data) {

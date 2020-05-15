@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 import classnames from "classnames";
-import Constants from "../../../../api/Constants/Constants";
+import Constants from "../../../../../api/Constants/Constants";
 
-import CardFD from "./CardFD";
-import Popup from "../../../components/Popup/Popup";
-import Switch from "../../../components/Switch/Switch";
-import Button from "../../../components/Button/Button";
+import CardFD from "../CardFD/CardFD";
+import Popup from "../../../../components/Popup/Popup";
+import Switch from "../../../../components/Switch/Switch";
+import Button from "../../../../components/Button/Button";
 
 import "./SystemsFD.scss";
 

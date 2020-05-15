@@ -7,7 +7,7 @@ import socket from "../../../startup/client/socket";
 import Constants from "../../../api/Constants/Constants";
 
 // Import screens
-import SplashMVS from "./screens/SplashMVS";
+import SplashMVS from "./screens/SplashMVS/SplashMVS";
 
 // Import components
 import Line from "../../components/Line/Line";
