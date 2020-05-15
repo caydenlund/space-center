@@ -1,7 +1,7 @@
-import { FlowRouter } from 'meteor/kadira:flow-router';
+import { FlowRouter } from "meteor/kadira:flow-router";
 
 // noinspection ES6CheckImport
-import { mount } from 'react-mounter';
+import { mount } from "react-mounter";
 
 import { _ } from "meteor/underscore";
 
@@ -59,7 +59,7 @@ FlowRouter.route("/stations/:Station", {
             console.log("Invalid Station: " + params.station);
             FlowRouter.go("Index");
         } else {
-            FlowRouter.go("Station", { station: station.name, screen: station.screens[0].name });
+            FlowRouter.go("Station", { station: station.name, screen: station.screens[ 0 ].name });
         }
     }
 });

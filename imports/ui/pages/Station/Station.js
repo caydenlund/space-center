@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { withTracker } from 'meteor/react-meteor-data';
+import { withTracker } from "meteor/react-meteor-data";
 import { Session } from "meteor/session";
-import { FlowRouter } from 'meteor/kadira:flow-router';
+import { FlowRouter } from "meteor/kadira:flow-router";
 import { _ } from "meteor/underscore";
 import socket from "../../../startup/client/socket";
 
@@ -19,7 +19,7 @@ import "./Station.scss";
 
 class Station extends Component {
     static getScreen(screen) {
-        let renderedScreen = "";
+        let renderedScreen;
         switch (screen) {
             case "Login":
                 renderedScreen = (<LoginScreen/>);

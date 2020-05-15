@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Meteor" pattern="file[space-center]:*/&amp;&amp;!file:package-lock.json&amp;&amp;!file:package.json&amp;&amp;!file[space-center]:imports/ui/static//*&amp;&amp;!file[space-center]:.idea//*&amp;&amp;!file[space-center]:.meteor//*" />
+</component>

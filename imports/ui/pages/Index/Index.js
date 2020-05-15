@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { FlowRouter } from 'meteor/kadira:flow-router';
+import React, { Component } from "react";
+import { FlowRouter } from "meteor/kadira:flow-router";
 import Constants from "../../../api/Constants/Constants";
 
 import "./Index.scss";

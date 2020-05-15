@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import classnames from "classnames";
+import React, { Component } from "react";
+import classnames from "classnames/index";
 
 import "./Button.scss";
 
 export default class Button extends Component {
     render() {
-        let classes = ["btn-container"];
+        let classes = [ "btn-container" ];
         classes.push(this.props.className);
         const buttonClassName = classnames(classes);
         return (

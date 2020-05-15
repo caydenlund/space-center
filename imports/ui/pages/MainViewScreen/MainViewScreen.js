@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withTracker } from 'meteor/react-meteor-data';
+import { withTracker } from "meteor/react-meteor-data";
 import { Session } from "meteor/session";
 import socket from "../../../startup/client/socket";
 

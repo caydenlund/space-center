@@ -23,9 +23,9 @@ class SystemPopup extends Component {
 
     clickSwitch(property) {
         let update = {};
-        update[property] = !this.state.system[property];
+        update[ property ] = !this.state.system[ property ];
         let system = this.state.system;
-        system[property] = !system[property];
+        system[ property ] = !system[ property ];
         this.setState({ system });
         Meteor.call("systems.updateSystem", this.state.system.name, update);
     }
@@ -63,8 +63,9 @@ class SystemPopup extends Component {
                                    if (event.key === "Enter") {
                                        let powerUse = parseInt(event.target.value);
                                        event.target.value = "";
-                                       if (isNaN(powerUse))
-                                           return;
+                                       if (isNaN(powerUse)) {
+return;
+}
                                        let system = this.state.system;
                                        system.powerUse = powerUse;
                                        this.setState({ system });
@@ -124,7 +125,7 @@ export default class SystemsFD extends Component {
 
     system(system) {
         let power = "0/" + system.powerUse;
-        let classes = ["system"];
+        let classes = [ "system" ];
         if (system.hidden) {
             classes.push("hidden");
         }

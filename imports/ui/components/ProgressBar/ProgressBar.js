@@ -6,7 +6,7 @@ import "./ProgressBar.scss";
 // noinspection JSUnusedGlobalSymbols
 export default class ProgressBar extends Component {
     innerBar() {
-        let classes = ["inner"];
+        let classes = [ "inner" ];
         classes.push(this.props.color);
         const className = classnames(classes);
         return (
@@ -16,7 +16,7 @@ export default class ProgressBar extends Component {
     }
 
     render() {
-        let classes = ["progressBar"];
+        let classes = [ "progressBar" ];
         classes.push(this.props.className);
         const className = classnames(classes);
         return (

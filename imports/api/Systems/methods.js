@@ -22,8 +22,9 @@ Meteor.methods({
         });
     },
     "systems.updateSystem"(name, properties) {
-        if (!!properties.name || !!properties._id)
-            return;
+        if (!!properties.name || !!properties._id) {
+return;
+}
         const update = { $set: properties };
         let updateContext = Systems.schema.newContext();
         updateContext.validate(update, { modifier: true });
